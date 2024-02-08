@@ -12,8 +12,10 @@ def parser(file_path):
     tracks_info = {}
 
     # Step 4: Extract and store information about tracks, signals, switches, and detectors
+    i = 0
     for track_element in root.findall('.//railml:track', namespace):
         # Extract track information
+        track_id = i
         track_name = track_element.get('name', '')
         pos_start = float(track_element.find('.//railml:trackBegin', namespace).get('absPos', '0.0'))
         pos_end = float(track_element.find('.//railml:trackEnd', namespace).get('absPos', '0.0'))
@@ -41,12 +43,15 @@ def parser(file_path):
 
         # Store track information in the dictionary
         tracks_info[track_name] = {
+            'track_id' : track_id,
             'pos_start': pos_start,
             'pos_end': pos_end,
             'signals': signals,
             'switches': switches,
             'detectors': detectors
         }
+
+        i = i+1
 
     # Return the extracted details
     return tracks_info
@@ -57,7 +62,7 @@ tracks_info = parser(file_path)
 
 # Print extracted details
 for track_name, track_info in tracks_info.items():
-    print(f"\nTrack: {track_name}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
+    print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
     print("Signals:")
     for signal in track_info['signals']:
         print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
