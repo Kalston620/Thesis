@@ -32,7 +32,16 @@ def parser(file_path):
         for switch_element in track_element.findall('.//railml:trackTopology/railml:connections/railml:switch', namespace):
             switch_name = switch_element.get('id', '')
             switch_pos = float(switch_element.get('pos', '0.0'))
-            switches.append({'name': switch_name, 'pos': switch_pos})
+
+            connection = []
+            for connection_element in switch_element.findall('.//railml:connection', namespace):
+                connection_id = switch_name
+                connection_start_id = connection_element.get('id','')
+                connection_end_id = connection_element.get('ref','')
+                connection_course = connection_element.get('course','')
+                connection_orientation = connection_element.get('orientation','')
+                connection.append({'id': connection_id, 'start_id': connection_start_id, 'end_id': connection_end_id, 'course': connection_course, 'orientation': connection_orientation})
+            switches.append({'name': switch_name, 'pos': switch_pos, 'connection': connection})
 
         # Extract detectors for the track
         detectors = []
@@ -51,10 +60,11 @@ def parser(file_path):
             'detectors': detectors
         }
 
-        i = i+1
+        i += 1
 
     # Return the extracted details
     return tracks_info
+
 '''
 # Example test:
 file_path = 'example-split.railml.xml'
@@ -69,6 +79,9 @@ for track_name, track_info in tracks_info.items():
     print("Switches:")
     for switch in track_info['switches']:
         print(f"  Switch Name: {switch['name']}, Position: {switch['pos']}")
+        print("    Connections:")
+        for connection in switch['connection']:
+            print(f"    ID: {connection['id']}, Start: {connection['start_id']}, End: {connection['end_id']}, Course: {connection['course']}, Orientation: {connection['orientation']}")
     print("Detectors:")
     for detector in track_info['detectors']:
         print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
