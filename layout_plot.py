@@ -19,7 +19,10 @@ def plot_track_layout(tracks_info):
         # Switch
         for switch in track_info['switches']:
             plt.scatter(pos_start + switch['pos'], y_axis, marker='^', color='blue', label=f"{switch['name']} ({track_name})")
-            #plt.plot([pos_start+switch['switch'],pos_start])
+            #TODO: plot connection for switch
+            #for connection in switch['connection']:
+            #    plt.plot([pos_start + switch['pos'],])
+            
         # Detector
         for detector in track_info['detectors']:
             plt.scatter(pos_start + detector['pos'], y_axis, marker='o', color='green', label=f"{detector['name']} ({track_name})")
@@ -35,7 +38,7 @@ def plot_track_layout(tracks_info):
     plt.show()
 
 # Test with parser output
-file_path = 'example-split.railml.xml'
+file_path = 'example-twotrack.railml.xml'
 tracks_info = railml_parser.parser(file_path)
 
 plot_track_layout(tracks_info)

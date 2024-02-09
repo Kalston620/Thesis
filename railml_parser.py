@@ -18,6 +18,14 @@ def parser(file_path):
         track_id = i
         track_name = track_element.get('name', '')
         pos_start = float(track_element.find('.//railml:trackBegin', namespace).get('absPos', '0.0'))
+        #TODO: Add connections here to pair with connections in switches (For plot connection)
+        '''
+        connections = []
+        for connection_element in track_element.find('.//railml:trackBegin', namespace):
+            connection_end = connection_element.get('id','') 
+            connection_start = connection_element.get('ref','')
+        connections.append({'Start': connection_start, 'End': connection_end})
+        '''
         pos_end = float(track_element.find('.//railml:trackEnd', namespace).get('absPos', '0.0'))
 
         # Extract signals for the track
@@ -54,6 +62,7 @@ def parser(file_path):
         tracks_info[track_name] = {
             'track_id' : track_id,
             'pos_start': pos_start,
+            #'connection': connections,
             'pos_end': pos_end,
             'signals': signals,
             'switches': switches,
@@ -65,7 +74,7 @@ def parser(file_path):
     # Return the extracted details
     return tracks_info
 
-'''
+
 # Example test:
 file_path = 'example-split.railml.xml'
 tracks_info = parser(file_path)
@@ -73,6 +82,7 @@ tracks_info = parser(file_path)
 # Print extracted details
 for track_name, track_info in tracks_info.items():
     print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
+    #print(f"Connections: {connections[]}")
     print("Signals:")
     for signal in track_info['signals']:
         print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
@@ -85,4 +95,3 @@ for track_name, track_info in tracks_info.items():
     print("Detectors:")
     for detector in track_info['detectors']:
         print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
-'''
