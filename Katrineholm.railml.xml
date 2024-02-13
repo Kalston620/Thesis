@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<railml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.railml.org/schemas/2013">
+  <infrastructure>
+    <tracks>
+        <track name="SP5">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="SS02" />
+                </trackBegin>
+                <trackEnd pos="2745.0" absPos="2745.0">
+                    <connection id="sw12b" ref="sw12a" />
+                </trackEnd>
+                <connection>
+                    <switch pos="143.0" absPos="143.0" dir="up" id="sw3">
+                        <connection id="sw3b" ref="sw3a" course="right" orientation="incoming" />
+                    </switch>
+                </connection>
+            </trackTopology>
+        </track>
+        <track name="SP4">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="SS01" />
+                </trackBegin>
+                <trackEnd pos="2421.0" absPos="2421.0">
+                    <connection id="sw10b" ref="sw10a" />
+                </trackEnd>
+                <connections>
+                    <switch pos="191.0" absPos="191.0" dir="down" id="sw3">
+                        <connection id="sw3a" ref="sw3b" course="right" orientation="incoming" />
+                    </switch>
+                </connections>
+            </trackTopology>
+        </track>
+        <track name="SP3">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="VS02W" />
+                </trackBegin>
+                <trackEnd pos="2800.0" absPos="2800.0">
+                    <openEnd id="VS02E" />
+                </trackEnd>
+                <connections>
+                    <switch pos="2433.0" absPos="2433.0" dir="down" id="sw10">
+                        <connection id="sw10a" ref="sw10b" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="2745.0" absPos="2745.0" dir="down" id="sw12">
+                        <connection id="sw12a" ref="sw12b" course="left" orientation="incoming" />
+                    </switch>
+                </connections>
+            </trackTopology>
+        </track>
+        <track name="SP2">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="VS01W" />
+                </trackBegin>
+                <trackEnd pos="2800.0" absPos="2800.0">
+                    <openEnd id="VS01E" />
+                </trackEnd>
+                <connections>
+                    <switch pos="1200.0" absPos="1200.0" dir="up" id="sw5">
+                        <connection id="sw5b" ref="sw5a" course="left" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2181.0" absPos="2181.0" dir="up" id="sw8">
+                        <connection id="sw8b" ref="sw8a" dir="up" orientation="incoming" />
+                    </switch>
+                </connections>
+            </trackTopology>
+        </track>
+        <track name="SP1">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="1200.0">
+                    <connection id="sw5a" ref="sw5b" />
+                </trackBegin>
+                <trackEnd pos="923.0" absPos="2123.0">
+                    <connection id="sw8a" ref="sw8b" />
+                </trackEnd>
+            </trackTopology>
+        </track>
+    </tracks>
+  </infrastructure>
+</railml>

@@ -29,7 +29,7 @@ def plot_track_layout(tracks_info):
             plt.scatter(pos_start + switch['pos'], y_axis, marker='^', color='blue', label=f"{switch['name']} ({track_name})")
             for connection in switch['connection']:
                 print(connection)
-                print("!")
+                #print("!")
                 X, Y = find_connection.find_end_point(connection, track_connection)
                 print(X,', ',Y)
                 plt.plot([pos_start + switch['pos'],X],[y_axis,Y], label=f'Switch {switch['name']}', linestyle='-', color='black')
@@ -48,7 +48,7 @@ def plot_track_layout(tracks_info):
     plt.show()
 
 # Test with parser output
-file_path = 'example-split.railml.xml'
+file_path = 'Katrineholm.railml.xml'
 tracks_info = railml_parser.parser(file_path)
 
 plot_track_layout(tracks_info)

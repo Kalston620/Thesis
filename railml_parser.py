@@ -80,7 +80,7 @@ def parser(file_path):
 
 '''
 # Example test:
-file_path = 'example-twotrack.railml.xml'
+file_path = 'GMB1.railml'
 tracks_info = parser(file_path)
 
 # Print extracted details
@@ -88,7 +88,7 @@ for track_name, track_info in tracks_info.items():
     print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
     for connection_track in track_info['connection_track']:
         print("    Connections:")
-        print(f"    Start: {connection_track['Start']}, End: {connection_track['End']}, X: {connection_track['X_axis']}, Y: {connection_track[]}")
+        print(f"    Start: {connection_track['Start']}, End: {connection_track['End']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
     print("Signals:")
     for signal in track_info['signals']:
         print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
@@ -102,3 +102,4 @@ for track_name, track_info in tracks_info.items():
     for detector in track_info['detectors']:
         print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
 '''
+#print(tracks_info)
