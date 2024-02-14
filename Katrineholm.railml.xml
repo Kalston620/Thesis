@@ -11,8 +11,14 @@
                     <connection id="sw12b" ref="sw12a" />
                 </trackEnd>
                 <connections>
-                    <switch pos="143.0" absPos="143.0" dir="up" id="sw3">
+                    <switch pos="143.0" absPos="143.0" dir="up" id="sw3sp5">
                         <connection id="sw3b" ref="sw3a" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="276.0" absPos="276.0" dir="up" id="sw4sp5">
+                        <connection id="sw4b" ref="sw4a" course="right" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2221.0" absPos="2221.0" dir="up" id="sw9sp5" >
+                        <connection id="sw9b" ref="sw9a" course="right" orientation="outgoing" />
                     </switch>
                 </connections>
             </trackTopology>
@@ -26,8 +32,20 @@
                     <connection id="sw10b" ref="sw10a" />
                 </trackEnd>
                 <connections>
-                    <switch pos="191.0" absPos="191.0" dir="down" id="sw3">
+                    <switch pos="191.0" absPos="191.0" dir="down" id="sw3sp4">
                         <connection id="sw3a" ref="sw3b" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="252.0" absPos="252.0" dir="down" id="sw4sp4">
+                        <connection id="sw4a" ref="sw4b" course="right" orientation="outgoing" />
+                    </switch>
+                    <switch pos="1423.0" absPos="1423.0" dir="up" id="sw6sp4">
+                        <connection id="sw6b" ref="sw6a" course="left" orientation="incoming" />
+                    </switch> 
+                    <switch pos="1289.0" absPos="1289.0" dir="up" id="sw7sp4">
+                        <connection id="sw7b" ref="sw7a" course="left" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2155.0" absPos="2155.0" dir="down" id="sw9sp4">
+                        <connection id="sw9a" ref="sw9b" course="right" orientation="outgoing" />
                     </switch>
                 </connections>
             </trackTopology>
@@ -41,8 +59,23 @@
                     <openEnd id="VS02E" />
                 </trackEnd>
                 <connections>
+                    <switch pos="110.0" absPos="110.0" dir="up" id="sw1sp3">
+                        <connection id="sw1b" ref="sw1a" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="195.0" absPos="195.0" dir="up" id="sw2sp3">
+                        <connection id="sw2b" ref="sw2a" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="1289.0" absPos="1289.0" dir="down" id="sw6sp3">
+                        <connection id="sw6a" ref="sw6b" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="1423.0" absPos="1423.0" dir="down" id="sw7sp3">
+                        <connection id="sw7a" ref="sw7b" course="left" orientation="outgoing" />
+                    </switch>
                     <switch pos="2433.0" absPos="2433.0" dir="down" id="sw10">
                         <connection id="sw10a" ref="sw10b" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="2567.0" absPos="2567.0" dir="up" id="sw11sp3">
+                        <connection id="sw11b" ref="sw11a" course="right" orientation="incoming" />
                     </switch>
                     <switch pos="2745.0" absPos="2745.0" dir="down" id="sw12">
                         <connection id="sw12a" ref="sw12b" course="left" orientation="incoming" />
@@ -59,11 +92,20 @@
                     <openEnd id="VS01E" />
                 </trackEnd>
                 <connections>
+                    <switch pos="50.0" absPos="50.0" dir="down" id="sw1sp2">
+                        <connection id="sw1a" ref="sw1b" course="right" orientation="outgoing" />
+                    </switch>
+                    <switch pos="252.0" absPos="252.0" dir="down" id="sw2sp2">
+                        <connection id="sw2a" ref="sw2b" course="right" orientation="incoming" />
+                    </switch>
                     <switch pos="1200.0" absPos="1200.0" dir="up" id="sw5">
                         <connection id="sw5b" ref="sw5a" course="left" orientation="outgoing" />
                     </switch>
                     <switch pos="2181.0" absPos="2181.0" dir="up" id="sw8">
-                        <connection id="sw8b" ref="sw8a" dir="up" orientation="incoming" />
+                        <connection id="sw8b" ref="sw8a" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="2656.0" absPos="2656.0" dir="down" id="sw11sp2">
+                        <connection id="sw11a" ref="sw11b" course="right" orientation="incoming" />
                     </switch>
                 </connections>
             </trackTopology>
