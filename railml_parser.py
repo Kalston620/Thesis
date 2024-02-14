@@ -21,16 +21,16 @@ def parser(file_path):
         # Add connection info, for plot connection
         connection_track = []
         for connection_track_element_begin in track_element.findall('.//railml:trackBegin/railml:connection', namespace):
-            connection_end = connection_track_element_begin.get('id','') 
-            connection_start = connection_track_element_begin.get('ref','')
-            connection_track.append({'Start': connection_start, 'End': connection_end, 'Y_axis': track_id, 'X_axis': pos_start})
+            connection_id = connection_track_element_begin.get('id','') 
+            connection_ref = connection_track_element_begin.get('ref','')
+            connection_track.append({'id': connection_id, 'ref': connection_ref, 'Y_axis': track_id, 'X_axis': pos_start})
         
         pos_end = float(track_element.find('.//railml:trackEnd', namespace).get('absPos', '0.0'))
 
         for connection_track_element_end in track_element.findall('.//railml:trackEnd/railml:connection', namespace):
-            connection_end = connection_track_element_end.get('id','') 
-            connection_start = connection_track_element_end.get('ref','')
-            connection_track.append({'Start': connection_start, 'End': connection_end, 'Y_axis': track_id, 'X_axis': pos_end})
+            connection_id = connection_track_element_end.get('id','') 
+            connection_ref = connection_track_element_end.get('ref','')
+            connection_track.append({'id': connection_id, 'ref': connection_ref, 'Y_axis': track_id, 'X_axis': pos_end})
 
         # Extract signals for the track
         signals = []
@@ -80,7 +80,7 @@ def parser(file_path):
 
 '''
 # Example test:
-file_path = 'GMB1.railml'
+file_path = 'Katrineholm.railml.xml'
 tracks_info = parser(file_path)
 
 # Print extracted details
@@ -102,4 +102,3 @@ for track_name, track_info in tracks_info.items():
     for detector in track_info['detectors']:
         print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
 '''
-#print(tracks_info)
