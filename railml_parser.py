@@ -38,7 +38,7 @@ def parser(file_path):
             signal_name = signal_element.get('name', '')
             signal_pos = float(signal_element.get('pos', '0.0'))
             signal_dir = signal_element.get('dir','')
-            signals.append({'name': signal_name, 'pos': signal_pos})
+            signals.append({'name': signal_name, 'pos': signal_pos, 'dir': signal_dir})
 
         # Extract switches for the track
         switches = []
