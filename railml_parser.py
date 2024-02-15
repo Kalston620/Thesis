@@ -37,6 +37,7 @@ def parser(file_path):
         for signal_element in track_element.findall('.//railml:ocsElements/railml:signals/railml:signal', namespace):
             signal_name = signal_element.get('name', '')
             signal_pos = float(signal_element.get('pos', '0.0'))
+            signal_dir = signal_element.get('dir','')
             signals.append({'name': signal_name, 'pos': signal_pos})
 
         # Extract switches for the track
