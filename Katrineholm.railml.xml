@@ -22,6 +22,14 @@
                     </switch>
                 </connections>
             </trackTopology>
+            <ocsElements>
+                <signals>
+                    <signal id="sp5-1" pos="123.0" absPos="123.0" name="sp5-1" dir="up" />
+                    <signal id="sp5-2" pos="296.0" absPos="296.0" name="sp5-2" dir="down" />
+                    <signal id="sp5-3" pos="2241.0" absPos="2241.0" name="sp5-3" dir="down" />
+                    <signal id="sp5-4" pos="2725.0" absPos="2725.0" name="sp5-4" dir="up" />
+                </signals>
+            </ocsElements>
         </track>
         <track name="SP4">
             <trackTopology>
@@ -49,6 +57,16 @@
                     </switch>
                 </connections>
             </trackTopology>
+            <ocsElements>
+                <signals>
+                    <signal id="sp4-1" pos="211.0" absPos="211.0" name="sp4-1" dir="down" />
+                    <signal id="sp4-2" pos="232.0" absPos="232.0" name="sp4-2" die="up" />
+                    <signal id="sp4-3" pos="1269.0" absPos="1269.0" name="sp4-3" dir="up" />
+                    <signal id="sp4-4" pos="1443.0" absPos="1443.0" name="sp4-4" dir="down" />
+                    <signal id="sp4-5" pos="2135.0" absPos="2135.0" name="sp4-5" dir="up" />
+                    <signal id="sp4-6" pos="2401.0" absPos="2401.0" name="sp4-6" dir="up" />
+                </signals>
+            </ocsElements>
         </track>
         <track name="SP3">
             <trackTopology>
@@ -82,6 +100,17 @@
                     </switch>
                 </connections>
             </trackTopology>
+            <ocsElements>
+                <signals>
+                    <signal id="sp3-1" pos="130.0" absPos="130.0" name="sp3-1" dir="down" />
+                    <signal id="sp3-2" pos="175.0" absPos="175.0" name="sp3-2" dir="up" />
+                    <signal id="sp3-3" pos="1269.0" absPos="1269.0" name="sp3-3" dir="up" />
+                    <signal id="sp3-4" pos="1443.0" absPos="1443.0" name="sp3-4" dir="down" />
+                    <signal id="sp3-5" pos="2453.0" absPos="2453.0" name="sp3-5" dir="down" />
+                    <signal id="sp3-6" pos="2547.0" absPos="2547.0" name="sp3-6" dir="up" />
+                    <signal id="sp3-7" pos="2765.0" absPos="2765.0" name="sp3-7" dir="down" />
+                </signals>
+            </ocsElements>
         </track>
         <track name="SP2">
             <trackTopology>
@@ -109,6 +138,15 @@
                     </switch>
                 </connections>
             </trackTopology>
+            <ocsElements>
+                <signals>
+                    <signal id="sp2-1" pos="30.0" absPos="30.0" name="sp2-1" dir="up" />
+                    <signal id="sp2-2" pos="273.0" absPos="273.0" name="sp2-2" dir="down" />
+                    <signal id="sp2-3" pos="1180.0" absPos="1180.0" name="sp2-3" dir="up" />
+                    <signal id="sp2-4" pos="2201.0" absPos="2201.0" name="sp2-4" dir="down" />
+                    <signal id="sp2-5" pos="2676.0" absPos="2676.0" name="sp2-5" dir="down" />
+                </signals>
+            </ocsElements>
         </track>
         <track name="SP1">
             <trackTopology>
@@ -119,6 +157,12 @@
                     <connection id="sw8a" ref="sw8b" />
                 </trackEnd>
             </trackTopology>
+            <ocsElements>
+                <signals>
+                    <signal id="sp1-1" pos="50.0" absPos="1250.0" name="sp1-1" dir="down" />
+                    <signal id="sp1-2" pos="900.0" absPos="2100.0" name="sp1-2" dir="up" />
+                </signals>
+            </ocsElements>
         </track>
     </tracks>
   </infrastructure>
