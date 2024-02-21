@@ -90,7 +90,7 @@ def parser(file_path):
     # Return the extracted details
     return tracks_info
 
-
+'''
 # Example test:
 file_path = 'Katrineholm.railml.xml'
 tracks_info = parser(file_path)
@@ -116,3 +116,4 @@ for track_name, track_info in tracks_info.items():
     print("Track circuit borders:")
     for circuit in track_info['circuits']:
         print(f"  Border id: {circuit['id']}, Position: {circuit['pos']}, AbsPosition: {circuit['absPos']}")
+'''
