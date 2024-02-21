@@ -46,7 +46,9 @@ def plot_track_layout(tracks_info):
         # Detector
         for detector in track_info['detectors']:
             plt.scatter(pos_start + detector['pos'], y_axis, marker='o', color='green', label=f"{detector['name']} ({track_name})")
-
+        # Track circuit border
+        for circuit in track_info['circuits']:
+            plt.scatter(pos_start + float(circuit['pos']), y_axis, marker='x', color='black', s=80, label=f"{circuit['id']} ({track_name})")
     # Add label and title
     plt.xlabel('Position')
     plt.ylabel('Track Layout')

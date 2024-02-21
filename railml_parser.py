@@ -63,6 +63,16 @@ def parser(file_path):
             detector_pos = float(detector_element.get('pos', '0.0'))
             detectors.append({'name': detector_name, 'pos': detector_pos})
 
+        # Extract track circuit border
+        circuits = []
+        for circuit_element in track_element.findall('.//railml:ocsElements/railml:trainDetectionElements/railml:trackCircuitBorder', namespace):
+            circuit_id = circuit_element.get('id','')
+            circuit_pos = circuit_element.get('pos','')
+            circuit_absPos = circuit_element.get('absPos','')
+            circuit_dir = circuit_element.get('dir','')
+            circuit_insulatedRail = circuit_element.get('insulatedRail','')
+            circuits.append({'id': circuit_id, 'pos': circuit_pos, 'absPos': circuit_absPos, 'dir': circuit_dir, 'insulatedRail': circuit_insulatedRail})
+
         # Store track information in the dictionary
         tracks_info[track_name] = {
             'track_id' : track_id,
@@ -71,7 +81,8 @@ def parser(file_path):
             'pos_end': pos_end,
             'signals': signals,
             'switches': switches,
-            'detectors': detectors
+            'detectors': detectors,
+            'circuits': circuits
         }
 
         i += 1
@@ -79,7 +90,7 @@ def parser(file_path):
     # Return the extracted details
     return tracks_info
 
-'''
+
 # Example test:
 file_path = 'Katrineholm.railml.xml'
 tracks_info = parser(file_path)
@@ -89,7 +100,7 @@ for track_name, track_info in tracks_info.items():
     print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
     for connection_track in track_info['connection_track']:
         print("    Connections:")
-        print(f"    Start: {connection_track['Start']}, End: {connection_track['End']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
+        #print(f"    Start: {connection_track['Start']}, End: {connection_track['End']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
     print("Signals:")
     for signal in track_info['signals']:
         print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
@@ -102,4 +113,6 @@ for track_name, track_info in tracks_info.items():
     print("Detectors:")
     for detector in track_info['detectors']:
         print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
-'''
+    print("Track circuit borders:")
+    for circuit in track_info['circuits']:
+        print(f"  Border id: {circuit['id']}, Position: {circuit['pos']}, AbsPosition: {circuit['absPos']}")
