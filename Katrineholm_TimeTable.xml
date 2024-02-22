@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lineTraffics>
+    <line id="M1" from="VS02E" to="VS02E" timeFrom="06" timeTo="21" freq="1">
+        <route id="1" priority="1">
+             
+        </route>
+    </line>
+</lineTraffics>
