@@ -31,23 +31,15 @@
                 </signals>
                 <trainDetectionElements>
                     <trackCircuitBorder id="5-1" pos="0.0" absPos="0.0" name="5-1" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="5-2" pos="123.0" absPos="123.0" name="5-2" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="5-3" pos="123.0" absPos="123.0" name="5-3" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="5-4" pos="143.0" absPos="143.0" name="5-4" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="5-5" pos="143.0" absPos="143.0" name="5-5" dir="up" insulatedRail="right" />
                     <trackCircuitBorder id="5-6" pos="143.0" absPos="143.0" name="5-6" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="5-7" pos="276.0" absPos="276.0" name="5-7" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="5-8" pos="276.0" absPos="276.0" name="5-8" dir="down" insulatedRail="right" />
                     <trackCircuitBorder id="5-9" pos="276.0" absPos="276.0" name="5-9" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="5-10" pos="296.0" absPos="296.0" name="5-10" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="5-11" pos="296.0" absPos="296.0" name="5-11" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="5-12" pos="2221.0" absPos="2221.0" name="5-12" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="5-13" pos="2221.0" absPos="2221.0" name="5-13" dir="down" insulatedRail="right" />
                     <trackCircuitBorder id="5-14" pos="2221.0" absPos="2221.0" name="5-14" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="5-15" pos="2241.0" absPos="2241.0" name="5-15" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="5-16" pos="2241.0" absPos="2241.0" name="5-16" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="5-17" pos="2725.0" absPos="2725.0" name="5-17" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="5-18" pos="2725.0" absPos="2725.0" name="5-18" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="5-19" pos="2745.0" absPos="2745.0" name="5-19" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="5-20" pos="2745.0" absPos="2745.0" name="5-20" dir="up" insulatedRail="left" />
                 </trainDetectionElements>
