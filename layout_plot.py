@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import plot_parser
+import railml_parser
 import find_connection
 
 def plot_track_layout(tracks_info):
