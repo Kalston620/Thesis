@@ -15,17 +15,19 @@ def parser(file_path):
                 'timeFronm': line_element.get('timeFrom'),
                 'timeTo': line_element.get('timeTo'),
                 'freq': line_element.get('freq'),
-                'stop': line_element.get('stop')}
+                'stop': line_element.get('stop'),
+                'priority': line_element.get('priority')}
         
         lineTraffics.append(line)
-
+    # Rearrange the order according to priority
+    lineTraffics = sorted(lineTraffics, key=lambda x: int(x['priority']))
     return lineTraffics
 
-'''
+
 # Example test
 file_path = 'Katrineholm_TimeTable.xml'
 lineTraffics = parser(file_path)
 
 for line in lineTraffics:
-    print( print(f"Line ID: {line['id']}, Line Name: {line['name']}, Start: {line['start']}, End: {line['end']}, Route: {line['route']}, Time From: {line['timeFronm']}, Time To: {line['timeTo']}, Frequency: {line['freq']}, Stop: {line['stop']}"))
-'''
+    print( print(f"Line ID: {line['id']}, Line Name: {line['name']}, Start: {line['start']}, End: {line['end']}, Route: {line['route']}, Time From: {line['timeFronm']}, Time To: {line['timeTo']}, Frequency: {line['freq']}, Stop: {line['stop']}, Priority: {line['priority']}"))
+
