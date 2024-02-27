@@ -61,6 +61,6 @@ def plot_track_layout(tracks_info):
 
 # Test with parser output
 file_path = 'Katrineholm.railml.xml'
-tracks_info = plot_parser.parser(file_path)
+tracks_info = railml_parser.parser(file_path)
 
 plot_track_layout(tracks_info)
