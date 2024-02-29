@@ -95,9 +95,9 @@
             <node id="4-5"/>
             <node id="4-4"/>
             <node id="4-3"/>
-            <node id="1-5"/>
-            <node id="1-4"/>
-            <node id="1-1"/>
+            <node id="5-5"/>
+            <node id="5-4"/>
+            <node id="5-1"/>
         </alternative>
     </route>
     <route id="2" name="SS01ToVS01E" start="SS01" end="VS01E">
@@ -146,7 +146,7 @@
         <alternative id="1" platform="True">
             <node id="3-23"/>
             <node id="3-22"/>
-            <node id="2-20"/>
+            <node id="3-20"/>
             <node id="3-18"/>
             <node id="3-17"/>
             <node id="3-16"/>
