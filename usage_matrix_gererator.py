@@ -1,4 +1,3 @@
-from contourpy import max_threads
 import railml_parser
 
 def usage_matrix_generator(track_info):

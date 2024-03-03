@@ -1,11 +1,12 @@
 import xml.etree.ElementTree as ET
 
 def parser(file_path):
+    # Parsing the route XML file
     tree = ET.parse(file_path)
     root = tree.getroot()
 
     routes = []
-
+    # Extract needed info and put into routes
     for route_element in root.findall('route'):
         route = {'id': route_element.get('id'),
                  'name': route_element.get('name'),

@@ -5,7 +5,7 @@ def parser(file_path):
     root = tree.getroot()
 
     lineTraffics = []
-
+    # Parser and extract needed data
     for line_element in root.findall('line'):
         # Make stop boolean
         stop_value = line_element.get('stop')
