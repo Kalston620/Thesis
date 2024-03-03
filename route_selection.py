@@ -1,4 +1,3 @@
-from pyparsing import line_start
 import railml_parser
 import usage_matrix_gererator
 import route_parser
