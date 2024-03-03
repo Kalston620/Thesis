@@ -24,7 +24,7 @@ def parser(file_path):
 
     return routes
 
-
+'''
 # Example usage
 file_path = 'Katrineholm_Route.xml'
 routes = parser(file_path)
@@ -35,3 +35,4 @@ for route in routes:
     for alternative in route['alternatives']:
         print(f"  Alternative ID: {alternative['id']}, Platform: {alternative['platform']}, Nodes: {alternative['nodes']}")
 print(routes)
+'''
