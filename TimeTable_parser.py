@@ -28,10 +28,11 @@ def parser(file_path):
     lineTraffics = sorted(lineTraffics, key=lambda x: int(x['priority']))
     return lineTraffics
 
-
+'''
 # Example test
 file_path = 'Katrineholm_TimeTable.xml'
 lineTraffics = parser(file_path)
 
 for line in lineTraffics:
     print(f"Line ID: {line['id']}, Line Name: {line['name']}, Start: {line['start']}, End: {line['end']}, Route: {line['route']}, Time From: {line['timeFrom']}, Time To: {line['timeTo']}, Frequency: {line['freq']}, Stop: {line['stop']}, Priority: {line['priority']}")
+'''
