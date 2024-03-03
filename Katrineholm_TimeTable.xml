@@ -48,7 +48,7 @@
     <line id="41" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="16" timeTo="16" freq="1" stop="True" priority="1" />
     <line id="42" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="21" timeTo="21" freq="1" stop="True" priority="1" />
     <line id="43" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="06" timeTo="07" freq="1" stop="True" priority="1" />
-    <line id="44" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="9" timeTo="11" freq="1" stop="True" priority="1" />
+    <line id="44" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="09" timeTo="11" freq="1" stop="True" priority="1" />
     <line id="45" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
     <line id="46" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
     <line id="47" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="16" timeTo="19" freq="1" stop="True" priority="1" />
