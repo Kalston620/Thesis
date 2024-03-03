@@ -10,27 +10,28 @@ def parser(file_path):
         route = {'id': route_element.get('id'),
                  'name': route_element.get('name'),
                  'start': route_element.get('start'),
-                 'end': route_element.get('end'),
-                 'alternatives': []}
+                 'end': route_element.get('end')}
+        
+        alternatives = []
+        for alternative_element in route_element.findall('alternative'):
+            alternative = {'id': alternative_element.get('id'),
+                           'platform': alternative_element.get('platform').lower() == 'true',
+                           'nodes': [node_element.get('id') for node_element in alternative_element.findall('node')]}
+            alternatives.append(alternative)
 
-        for alt_elem in route_element.findall('alternative'):
-            alternative = {'id': alt_elem.get('id'),
-                           'platform': alt_elem.get('platform'),
-                           'nodes': [node.get('id') for node in alt_elem.findall('node')]}
-            route['alternatives'].append(alternative)
-
+        route['alternatives'] = alternatives
         routes.append(route)
 
     return routes
 
-'''
-# Example test:
+
+# Example usage
 file_path = 'Katrineholm_Route.xml'
 routes = parser(file_path)
 
-# Print output
+# Print the parsed data
 for route in routes:
-    print(f"Route {route['id']}: {route['name']} ({route['start']} to {route['end']})")
-    for alt in route['alternatives']:
-        print(f"  Alternative {alt['id']}: Platform {alt['platform']}, Nodes {alt['nodes']}")
-'''
+    print(f"Route ID: {route['id']}, Name: {route['name']}, Start: {route['start']}, End: {route['end']}")
+    for alternative in route['alternatives']:
+        print(f"  Alternative ID: {alternative['id']}, Platform: {alternative['platform']}, Nodes: {alternative['nodes']}")
+print(routes)
