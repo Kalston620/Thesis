@@ -20,9 +20,11 @@ def usage_matrix_generator(track_info):
     max_traffic = 10
     return circuitBorder, usage, max_traffic
 
+'''
 # Example Test
 track_info = railml_parser.parser('Katrineholm.railml.xml')
 [circuitBorder, usage, max_traffic] = usage_matrix_generator(track_info)
 print(circuitBorder)
 print(usage)
 print(max_traffic)
+'''
