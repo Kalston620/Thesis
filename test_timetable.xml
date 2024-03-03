@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lineTraffics>
-    <line id="1" name="SJ IC, Stockholm2Karlstad" start="VS02E" end="VS02W" route="3" timeFrom="00" timeTo="23" freq="1" stop="True" priority="1" />
+    <line id="1" name="SJ IC, Stockholm2Karlstad" start="VS02E" end="VS02W" route="4" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" />
+    <line id="2" name="SJ IC, Stockholm2Karlstad" start="VS02E" end="VS02W" route="4" timeFrom="00" timeTo="23" freq="1" stop="True" priority="1" />
 </lineTraffics>
