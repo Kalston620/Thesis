@@ -79,7 +79,7 @@ def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
                         print(f"line id '{line_id}' in timetable cannot be added in, as flow overload! But consider break this line traffic into smaller time period!")
     return usage, borderName, lines_path
                         
-
+'''
 # Example test
 lineTraffics = TimeTable_parser.parser('test_timetable.xml')
 routes = route_parser.parser('Katrineholm_Route.xml')
@@ -95,3 +95,4 @@ for i in range(0, len(linesPath)):
     c.append(linesPath[i]['alternative id'])
 for j in range(0,len(a)):
     print(f"{a[j]}, {b[j]}, {c[j]}")
+'''
