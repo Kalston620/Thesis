@@ -4,7 +4,7 @@ import find_connection
 
 def plot_track_layout(tracks_info):
     # New Figuer
-    plt.figure(figsize=(10, 6))
+    #plt.figure(figsize=(10, 6))
 
     # Get track connection, including track_end-switch and switch-switch
     track_connection = []
@@ -48,7 +48,7 @@ def plot_track_layout(tracks_info):
     plt.grid(True)
 
     # Show plot
-    plt.show()
+    #plt.show()
 
 # Test with parser output
 if __name__ == "__main__":
