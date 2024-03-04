@@ -7,7 +7,7 @@ def usage_matrix_generator(track_info):
         track_id = track_item['track_id']
         for circuit in track_item['circuits']:
             name = circuit['id']
-            pos = float(circuit['pos'])
+            pos = float(circuit['absPos'])
             circuitBorder.append({"Name": name, "Y-axis": track_id, "X_axis": pos})
 
     # Set List reprtsent usage of each node in time
