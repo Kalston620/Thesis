@@ -2,7 +2,7 @@
 <railml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.railml.org/schemas/2013">
   <infrastructure>
     <tracks>
-        <track name="SP5">
+        <track name="SP5" mainDir="down">
             <trackTopology>
                 <trackBegin pos="0.0" absPos="0.0">
                     <openEnd id="SS02" />
@@ -45,7 +45,7 @@
                 </trainDetectionElements>
             </ocsElements>
         </track>
-        <track name="SP4">
+        <track name="SP4" mainDir="up">
             <trackTopology>
                 <trackBegin pos="0.0" absPos="0.0">
                     <openEnd id="SS01" />
@@ -102,7 +102,7 @@
                 </trainDetectionElements> 
             </ocsElements>
         </track>
-        <track name="SP3">
+        <track name="SP3" mainDir="down">
             <trackTopology>
                 <trackBegin pos="0.0" absPos="0.0">
                     <openEnd id="VS02W" />
@@ -171,7 +171,7 @@
                 </trainDetectionElements>
             </ocsElements>
         </track>
-        <track name="SP2">
+        <track name="SP2" mainDir="up">
             <trackTopology>
                 <trackBegin pos="0.0" absPos="0.0">
                     <openEnd id="VS01W" />
@@ -226,7 +226,7 @@
                 </trainDetectionElements>
             </ocsElements>
         </track>
-        <track name="SP1">
+        <track name="SP1" mainDir="up">
             <trackTopology>
                 <trackBegin pos="0.0" absPos="1200.0">
                     <connection id="sw5a" ref="sw5b" />
