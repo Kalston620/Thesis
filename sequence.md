@@ -46,3 +46,9 @@ Based on lineTraffics, routes, circuitBorder, usage, max_traffic, decided which 
 ## Input: lineTraffics, routes, circuitBorder, usage, max_traffic
 ## Output: usage, borderName, lines_path
 ## Need: railml_parser, usage_matrix_gererator, route_parser, TimeTable_parser (Not needed as import but need those's output as input)
+
+# route_visualization:
+To plot the selected route for each traffic, will generate as much figures as the number of traffic
+## Input: tracks_info (output of railml_parser), routes, lines_path, circuitBorder
+## Output: No data, but figures
+## Need: railml_parser, usage_matrix_gererator,route_parser, TimeTable_parser, route_selection, layout_plot_track_only, matplotlib.pyplot (Execute this after route_selection)
