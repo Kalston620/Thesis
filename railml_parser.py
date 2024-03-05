@@ -56,6 +56,7 @@ def parser(file_path):
         for switch_element in track_element.findall('.//railml:trackTopology/railml:connections/railml:switch', namespace):
             switch_name = switch_element.get('id', '')
             switch_pos = float(switch_element.get('pos', '0.0'))
+            switch_absPos = float(switch_element.get('absPos','0.0'))
 
             connection = []
             for connection_element in switch_element.findall('.//railml:connection', namespace):
@@ -65,7 +66,7 @@ def parser(file_path):
                 connection_course = connection_element.get('course','')
                 connection_orientation = connection_element.get('orientation','')
                 connection.append({'id': connection_id, 'start_id': connection_start_id, 'end_id': connection_end_id, 'course': connection_course, 'orientation': connection_orientation})
-            switches.append({'name': switch_name, 'pos': switch_pos, 'connection': connection})
+            switches.append({'name': switch_name, 'pos': switch_pos, 'absPos': switch_absPos, 'connection': connection})
 
         # Extract detectors for the track
         detectors = []
