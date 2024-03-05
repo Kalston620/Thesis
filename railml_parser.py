@@ -112,7 +112,7 @@ for track_name, track_info in tracks_info.items():
     print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Mian Direction: {track_info['mainDir']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
     for connection_track in track_info['connection_track']:
         print("    Connections:")
-        #print(f"    Start: {connection_track['Start']}, End: {connection_track['End']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
+        print(f"    id: {connection_track['id']}, ref: {connection_track['ref']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
     print("Signals:")
     for signal in track_info['signals']:
         print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
