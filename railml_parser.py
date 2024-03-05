@@ -25,13 +25,23 @@ def parser(file_path):
             connection_id = connection_track_element_begin.get('id','') 
             connection_ref = connection_track_element_begin.get('ref','')
             connection_track.append({'id': connection_id, 'ref': connection_ref, 'Y_axis': track_id, 'X_axis': pos_start})
-        
+        # Add openEnd info, for generate route
+        open_end_begin = []
+        for open_end_begin_element in track_element.findall('.//railml:trackBegin/railml:openEnd', namespace):
+            open_end_begin_id = open_end_begin_element
+            open_end_begin.append({'id': open_end_begin_id})
+
         pos_end = float(track_element.find('.//railml:trackEnd', namespace).get('absPos', '0.0'))
 
         for connection_track_element_end in track_element.findall('.//railml:trackEnd/railml:connection', namespace):
             connection_id = connection_track_element_end.get('id','') 
             connection_ref = connection_track_element_end.get('ref','')
             connection_track.append({'id': connection_id, 'ref': connection_ref, 'Y_axis': track_id, 'X_axis': pos_end})
+        # Add openEnd info, for generate route
+        open_end_end = []
+        for open_end_end_element in track_element.findall('.//railml:trackEnd/railml:openEnd', namespace):
+            open_end_end_id = open_end_end_element
+            open_end_end.append(open_end_end_id)
 
         # Extract signals for the track
         signals = []
@@ -88,7 +98,9 @@ def parser(file_path):
             'track_id' : track_id,
             'mainDir' : main_dir,
             'pos_start': pos_start,
+            'open_end_begin': open_end_begin,
             'connection_track': connection_track,
+            'open_end_end': open_end_end,
             'pos_end': pos_end,
             'signals': signals,
             'switches': switches,
