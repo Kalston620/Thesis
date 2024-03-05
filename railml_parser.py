@@ -17,6 +17,7 @@ def parser(file_path):
         # Extract track information
         track_id = i
         track_name = track_element.get('name', '')
+        main_dir = track_element.get('mainDir','')
         pos_start = float(track_element.find('.//railml:trackBegin', namespace).get('absPos', '0.0'))
         # Add connection info, for plot connection
         connection_track = []
@@ -73,16 +74,27 @@ def parser(file_path):
             circuit_insulatedRail = circuit_element.get('insulatedRail','')
             circuits.append({'id': circuit_id, 'pos': circuit_pos, 'absPos': circuit_absPos, 'dir': circuit_dir, 'insulatedRail': circuit_insulatedRail})
 
+        # Extract platform position
+        platform_edges = []
+        for platform_edge_element in track_element.findall('.//railml:trackElements/railml:platformEdges/railml:platformEdge', namespace):
+            platform_edge_id = platform_edge_element.get('id', '')
+            platform_edge_pos = float(platform_edge_element.get('pos', '0.0'))
+            platform_edge_abs_pos = float(platform_edge_element.get('absPos', '0.0'))
+            platform_edge_length = float(platform_edge_element.get('length', '0.0'))
+            platform_edges.append({'id': platform_edge_id, 'pos': platform_edge_pos, 'absPos': platform_edge_abs_pos, 'length': platform_edge_length})
+
         # Store track information in the dictionary
         tracks_info[track_name] = {
             'track_id' : track_id,
+            'mainDir' : main_dir,
             'pos_start': pos_start,
             'connection_track': connection_track,
             'pos_end': pos_end,
             'signals': signals,
             'switches': switches,
             'detectors': detectors,
-            'circuits': circuits
+            'circuits': circuits,
+            'platform': platform_edges
         }
 
         i += 1
@@ -90,14 +102,14 @@ def parser(file_path):
     # Return the extracted details
     return tracks_info
 
-'''
+
 # Example test:
 file_path = 'Katrineholm.railml.xml'
 tracks_info = parser(file_path)
 
 # Print extracted details
 for track_name, track_info in tracks_info.items():
-    print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
+    print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Mian Direction: {track_info['mainDir']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
     for connection_track in track_info['connection_track']:
         print("    Connections:")
         #print(f"    Start: {connection_track['Start']}, End: {connection_track['End']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
@@ -116,4 +128,6 @@ for track_name, track_info in tracks_info.items():
     print("Track circuit borders:")
     for circuit in track_info['circuits']:
         print(f"  Border id: {circuit['id']}, Position: {circuit['pos']}, AbsPosition: {circuit['absPos']}")
-'''
+    print("Platforms:")
+    for platform in track_info['platform']:
+        print(f"  Platform ID: {platform['id']}, Position: {platform['pos']}, AbsPosition: {platform['absPos']}, Length: {platform['length']}")
