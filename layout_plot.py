@@ -49,6 +49,9 @@ def plot_track_layout(tracks_info):
         # Track circuit border
         for circuit in track_info['circuits']:
             plt.scatter(pos_start + float(circuit['pos']), y_axis, marker='x', color='black', s=80, label=f"{circuit['id']} ({track_name})")
+        # Platform
+        for platform in track_info['platform']:
+            plt.plot([pos_start + float(platform['pos']), pos_start + float(platform['pos'] + float(platform['length']))], [y_axis,y_axis], linestyle='-', color='black', linewidth=3)
     # Add label and title
     plt.xlabel('Position')
     plt.ylabel('Track Layout')
