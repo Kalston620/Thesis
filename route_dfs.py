@@ -1,24 +1,28 @@
-def DFS(graph, start, end, path=[]):
+def DFS(graph, start, end, path=None, all_paths=None):
+    if path is None:
+        path = []
+    if all_paths is None:
+        all_paths = []
+
     path = path + [start]
-    
+
     if start == end:
-        return path
-    
+        all_paths.append(path.copy())
+        return all_paths  # 返回找到的路径
+
     if start not in graph:
         return None
-    
+
     for neighbor in graph[start]:
         if neighbor not in path:
-            new_path = DFS(graph, neighbor, end, path)
-            if new_path:
-                return new_path
-    
-    return None
+            DFS(graph, neighbor, end, path, all_paths)
+
+    return all_paths
 
 '''
-# Example Test
+# Example test
 graph = {
-    'A': ['B', 'C'],
+    'A': ['B', 'C', 'I'],
     'B': ['A', 'D', 'E'],
     'C': ['A', 'F', 'G'],
     'D': ['B'],
@@ -34,6 +38,5 @@ end_node = 'I'
 
 result = DFS(graph, start_node, end_node)
 
-if result:
-    print(result)
+print(result)
 '''
