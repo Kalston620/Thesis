@@ -23,7 +23,7 @@ def generator(start_n_end, start_n_end_dir, up_graph, down_graph):
         total_path.append(paths)
     return total_path
 
-
+'''
 # Example test
 tracks_info = railml_parser.parser('Katrineholm.railml.xml')
 [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
@@ -31,3 +31,4 @@ pairs = segment_generator.pairing(connection_data, circuitBorder_data)
 [start_n_end, up_graph, down_graph, start_n_end_dir] = route_generator_prep.generator_prep(track_data, pairs)
 paths = generator(start_n_end, start_n_end_dir, up_graph, down_graph)
 print(paths)
+'''
