@@ -175,7 +175,7 @@
                     <trackCircuitBorder id="3-13" pos="1423.0" absPos="1423.0" name="3-13" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="3-14" pos="2433.0" absPos="2433.0" name="3-14" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="3-15" pos="2433.0" absPos="2433.0" name="3-15" dir="down" insulatedRail="left" />
-                    <trackCircuitBorder id="3-16" pos="2433.0" absPos="2433.0" name="3-16" dir="up" insulatedRail="left" />
+                    <trackCircuitBorder id="3-16" pos="2433.0" absPos="2433.0" name="3-16" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="3-17" pos="2567.0" absPos="2567.0" name="3-17" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="3-18" pos="2567.0" absPos="2567.0" name="3-18" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="3-19" pos="2567.0" absPos="2567.0" name="3-19" dir="up" insulatedRail="right" />
