@@ -48,6 +48,5 @@ def pairing(connection_data, circuitBorder_data):
 tracks_info = railml_parser.parser('Katrineholm.railml.xml')
 [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
 pairs = pairing(connection_data, circuitBorder_data)
-for i in range(25,len(pairs)):
-    print(pairs[i])
+print(pairs)
 '''
