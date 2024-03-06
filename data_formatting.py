@@ -41,7 +41,7 @@ def data_formatting(tracks_info):
             circuit_absPos = circuitBorder['absPos']
             circuit_dir = circuitBorder['dir']
             circuit_insulatedRail = circuitBorder['insulatedRail']
-            circuitBorder_data.append({'id': circuit_id, 'absPos': circuit_absPos, 'dir': circuit_dir, 'insulatedRail': circuit_insulatedRail})
+            circuitBorder_data.append({'id': circuit_id, 'Y': track_id, 'absPos': circuit_absPos, 'dir': circuit_dir, 'insulatedRail': circuit_insulatedRail})
     return track_data, connection_data, circuitBorder_data
 
 '''
