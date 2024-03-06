@@ -52,3 +52,9 @@ To plot the selected route for each traffic, will generate as much figures as th
 ## Input: tracks_info (output of railml_parser), routes, lines_path, circuitBorder
 ## Output: No data, but figures
 ## Need: railml_parser, usage_matrix_gererator,route_parser, TimeTable_parser, route_selection, layout_plot_track_only, matplotlib.pyplot (Execute this after route_selection)
+
+# data_formatting:
+Extract data from the output of railml_parser and format it into needed data form for route generating
+## Input: tracks_info (output of railml_parser)
+## Output: track_data, connection_data, circuitBorder_data
+## NEED: railml_parser
