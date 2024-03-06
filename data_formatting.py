@@ -44,11 +44,11 @@ def data_formatting(tracks_info):
             circuitBorder_data.append({'id': circuit_id, 'Y': track_id, 'absPos': circuit_absPos, 'dir': circuit_dir, 'insulatedRail': circuit_insulatedRail})
     return track_data, connection_data, circuitBorder_data
 
-#'''
+'''
 # Example test
 tracks_info = railml_parser.parser('Katrineholm.railml.xml')
 [track_data, connection_data, circuitBorder_data] = data_formatting(tracks_info)
 print(track_data)
 print(connection_data)
 print(circuitBorder_data, len(circuitBorder_data))
-#'''
+'''
