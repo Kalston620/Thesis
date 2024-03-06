@@ -1,4 +1,3 @@
-from numpy import diff
 import railml_parser
 import data_formatting
 
