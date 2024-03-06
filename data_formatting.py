@@ -22,7 +22,7 @@ def data_formatting(tracks_info):
             platform = True
         else:  
             platform = False
-        track_data.append({'name': track_name, 'Y': track_id, 'Direction': main_dir, 'entry_from_start': open_end_begin, 'entry_from_end': open_end_end, 'is_platform': platform})
+        track_data.append({'name': track_name, 'Y': track_id, 'Direction': main_dir,  'Position Start': float(track_info['pos_start']), 'Position End': float(track_info['pos_end']), 'entry_from_start': open_end_begin, 'entry_from_end': open_end_end, 'is_platform': platform})
     
         # Collect connection data
         for connections in track_info['connection_track']:
@@ -44,11 +44,11 @@ def data_formatting(tracks_info):
             circuitBorder_data.append({'id': circuit_id, 'Y': track_id, 'absPos': circuit_absPos, 'dir': circuit_dir, 'insulatedRail': circuit_insulatedRail})
     return track_data, connection_data, circuitBorder_data
 
-'''
+#'''
 # Example test
 tracks_info = railml_parser.parser('Katrineholm.railml.xml')
 [track_data, connection_data, circuitBorder_data] = data_formatting(tracks_info)
 print(track_data)
 print(connection_data)
 print(circuitBorder_data, len(circuitBorder_data))
-'''
+#'''
