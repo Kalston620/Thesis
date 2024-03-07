@@ -8,7 +8,7 @@ def DFS(graph, start, end, path=None, all_paths=None):
 
     if start == end:
         all_paths.append(path.copy())
-        return all_paths  # 返回找到的路径
+        return all_paths
 
     if start not in graph:
         return None
