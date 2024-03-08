@@ -29,7 +29,7 @@ def parser(file_path):
         open_end_begin = []
         for open_end_begin_element in track_element.findall('.//railml:trackBegin/railml:openEnd', namespace):
             open_end_begin_id = open_end_begin_element.get('id','')
-            open_end_begin.append({'id': open_end_begin_id})
+            open_end_begin.append(open_end_begin_id)
 
         pos_end = float(track_element.find('.//railml:trackEnd', namespace).get('absPos', '0.0'))
 
