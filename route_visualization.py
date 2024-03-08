@@ -33,8 +33,8 @@ def visualization(tracks_info, routes, lines_path, circuitBorder):
 
 # Example test
 tracks_info = railml_parser.parser('Katrineholm.railml.xml')
-routes = route_parser.parser('Katrineholm_Route.xml')
+routes = route_parser.parser('example.xml')
 [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(tracks_info)
-lineTraffics = TimeTable_parser.parser('Katrineholm_TimeTable.xml')
+lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
 [usage, borderName, lines_path] = route_selection.route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
 visualization(tracks_info, routes, lines_path, circuitBorder)
