@@ -139,7 +139,7 @@
                     <switch pos="2567.0" absPos="2567.0" dir="up" id="sw11sp3">
                         <connection id="sw11b" ref="sw11a" course="right" orientation="incoming" />
                     </switch>
-                    <switch pos="2745.0" absPos="2745.0" dir="down" id="sw12">
+                    <switch pos="2746.0" absPos="2746.0" dir="down" id="sw12">
                         <connection id="sw12a" ref="sw12b" course="left" orientation="incoming" />
                     </switch>
                 </connections>
@@ -179,9 +179,9 @@
                     <trackCircuitBorder id="3-17" pos="2567.0" absPos="2567.0" name="3-17" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="3-18" pos="2567.0" absPos="2567.0" name="3-18" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="3-19" pos="2567.0" absPos="2567.0" name="3-19" dir="up" insulatedRail="right" />
-                    <trackCircuitBorder id="3-20" pos="2745.0" absPos="2745.0" name="3-20" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="3-21" pos="2745.0" absPos="2745.0" name="3-21" dir="down" insulatedRail="left" />
-                    <trackCircuitBorder id="3-22" pos="2745.0" absPos="2745.0" name="3-22" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-20" pos="2746.0" absPos="2746.0" name="3-20" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-21" pos="2746.0" absPos="2746.0" name="3-21" dir="down" insulatedRail="left" />
+                    <trackCircuitBorder id="3-22" pos="2746.0" absPos="2746.0" name="3-22" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="3-23" pos="2800.0" absPos="2800.0" name="3-23" dir="down" insulatedRail="none" />
                 </trainDetectionElements>
             </ocsElements>
@@ -201,7 +201,7 @@
                     <switch pos="252.0" absPos="252.0" dir="down" id="sw2sp2">
                         <connection id="sw2a" ref="sw2b" course="right" orientation="incoming" />
                     </switch>
-                    <switch pos="1200.0" absPos="1200.0" dir="up" id="sw5">
+                    <switch pos="1199.0" absPos="1199.0" dir="up" id="sw5">
                         <connection id="sw5b" ref="sw5a" course="left" orientation="outgoing" />
                     </switch>
                     <switch pos="2181.0" absPos="2181.0" dir="up" id="sw8">
@@ -228,9 +228,9 @@
                     <trackCircuitBorder id="2-5" pos="252.0" absPos="252.0" name="2-5" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="2-6" pos="252.0" absPos="252.0" name="2-6" dir="down" insulatedRail="right" />
                     <trackCircuitBorder id="2-7" pos="252.0" absPos="252.0" name="2-7" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="2-8" pos="1200.0" absPos="1200.0" name="2-8" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="2-9" pos="1200.0" absPos="1200.0" name="2-9" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="2-10" pos="1200.0" absPos="1200.0" name="2-10" dir="up" insulatedRail="left" />
+                    <trackCircuitBorder id="2-8" pos="1199.0" absPos="1199.0" name="2-8" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-9" pos="1199.0" absPos="1199.0" name="2-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-10" pos="1199.0" absPos="1199.0" name="2-10" dir="up" insulatedRail="left" />
                     <trackCircuitBorder id="2-11" pos="2181.0" absPos="2181.0" name="2-11" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="2-12" pos="2181.0" absPos="2181.0" name="2-12" dir="down" insulatedRail="left" />
                     <trackCircuitBorder id="2-13" pos="2181.0" absPos="2181.0" name="2-13" dir="up" insulatedRail="none" />
