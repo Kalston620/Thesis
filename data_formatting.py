@@ -11,13 +11,13 @@ def data_formatting(tracks_info):
 
         if track_info['open_end_begin']:
             open_end_begin = True
-            open_end_begin_name = track_info['open_end_begin']
+            open_end_begin_name = track_info['open_end_begin'][0]
         else:
             open_end_begin = False
             open_end_begin_name = None
         if track_info['open_end_end']:
             open_end_end = True
-            open_end_end_name = track_info['open_end_end']
+            open_end_end_name = track_info['open_end_end'][0]
         else: 
             open_end_end = False
             open_end_end_name = None
