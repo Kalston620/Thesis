@@ -27,7 +27,7 @@ def parser(file_path):
 
 '''
 # Example usage
-file_path = 'Katrineholm_Route.xml'
+file_path = 'example.xml'
 routes = parser(file_path)
 
 # Print the parsed data
