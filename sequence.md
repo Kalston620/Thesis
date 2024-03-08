@@ -57,4 +57,46 @@ To plot the selected route for each traffic, will generate as much figures as th
 Extract data from the output of railml_parser and format it into needed data form for route generating
 ## Input: tracks_info (output of railml_parser)
 ## Output: track_data, connection_data, circuitBorder_data
-## NEED: railml_parser
+## Need: railml_parser
+
+# segment_generator:
+pair the track circuit border into pair, reportsent as the smallest segement
+## Input: connection_data and circuitBorder_data from data_formatting
+## Output: pairs
+## Need: None, but need to run data_formatting first
+
+# route_dfs:
+Use Deep First Search to find all possible alternatives in a route
+## Input: graph, start, end, path=None, all_paths=None
+## Output: all_paths
+## Need: None, only used in route_generator
+
+# route_generator_prep:
+Data preperation for route_generator, need to run before route_generator.
+## Input: track_data from data_formatting, pairs from segement_generator
+## Output: start_n_end_index, up_graph_out, down_graph_out, start_n_end_dir
+## Need: None, but need to run data_formatting and segement_generator first
+
+# route_generator:
+generate all possible route in the station. Note: only consider line traffic, no turn around, no stop for lone time etc.
+## Input: start_n_end, start_n_end_dir, up_graph, down_graph from prep
+## Output: total_path
+## Need: route_dfs, run after route_generator_prep
+
+# route_file_generator_prep:
+Sort needed data by position order, % of running same direction as track main direction etc.
+# Input: total_path from route_generator, pairs from segment generator, start_n_end_dir from route_generator_prep, tracks_data from data_formatting
+# Output: sorted_result
+# Need: None, but need to run route_generator, segment generator, route_generator_prep, data_formatting first
+
+# route_file_generator:
+Generate route xml file, including all routes from different starting and ending point in station, as well as all alternatives in the route
+# Input: tracks_info from railml_parser, track_data from data_formatting, circuitBorder_data from data_formatting, result_from_prep, name_for_XML_file:str
+# Output: None in command window, but the route xml file
+# Need: xml.etree.ElementTree, also run after railml_parser, data_formatting, segment_generator, route_generator_prep, route_generator, route_file_generator_prep, route_file_generator
+
+# timetable_route_finder:
+Add route that traffic needs into timetable xml file
+## Input: timetable file path, route data from route_parser
+## Output: None in command window, but a new timetable xml file with route in it
+## Need: xml.etree.ElementTree as ET, run after route_file_generator -> route_parser
