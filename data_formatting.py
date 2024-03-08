@@ -11,18 +11,22 @@ def data_formatting(tracks_info):
 
         if track_info['open_end_begin']:
             open_end_begin = True
+            open_end_begin_name = track_info['open_end_begin']
         else:
             open_end_begin = False
+            open_end_begin_name = None
         if track_info['open_end_end']:
             open_end_end = True
+            open_end_end_name = track_info['open_end_end']
         else: 
             open_end_end = False
+            open_end_end_name = None
 
         if track_info['platform']:
             platform = True
         else:  
             platform = False
-        track_data.append({'name': track_name, 'Y': track_id, 'Direction': main_dir,  'Position Start': float(track_info['pos_start']), 'Position End': float(track_info['pos_end']), 'entry_from_start': open_end_begin, 'entry_from_end': open_end_end, 'is_platform': platform})
+        track_data.append({'name': track_name, 'Y': track_id, 'Direction': main_dir,  'Position Start': float(track_info['pos_start']), 'Position End': float(track_info['pos_end']), 'entry_from_start': open_end_begin, 'entry_from_start_name': open_end_begin_name, 'entry_from_end': open_end_end, 'entry_from_end_name': open_end_end_name, 'is_platform': platform})
     
         # Collect connection data
         for connections in track_info['connection_track']:
