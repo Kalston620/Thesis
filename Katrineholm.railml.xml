@@ -84,7 +84,7 @@
             <ocsElements>
                 <signals>
                     <signal id="sp4-1" pos="272.0" absPos="272.0" name="sp4-1" dir="down" />
-                    <signal id="sp4-2" pos="171.0" absPos="171.0" name="sp4-2" die="up" />
+                    <signal id="sp4-2" pos="171.0" absPos="171.0" name="sp4-2" dir="up" />
                     <signal id="sp4-3" pos="1269.0" absPos="1269.0" name="sp4-3" dir="up" />
                     <signal id="sp4-4" pos="1443.0" absPos="1443.0" name="sp4-4" dir="down" />
                     <signal id="sp4-5" pos="2135.0" absPos="2135.0" name="sp4-5" dir="up" />
