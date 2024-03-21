@@ -1,6 +1,5 @@
 import railml_parser
 import find_connection
-import numpy as np
 
 def generator(tracks_info):
     #print(tracks_info)
