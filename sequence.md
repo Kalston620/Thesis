@@ -90,13 +90,19 @@ Sort needed data by position order, % of running same direction as track main di
 # Need: None, but need to run route_generator, segment generator, route_generator_prep, data_formatting first
 
 # route_file_generator:
-Generate route xml file, including all routes from different starting and ending point in station, as well as all alternatives in the route
+Generate route xml file, including all routes from different starting and ending point in station, as well as all alternatives in the route.
 # Input: tracks_info from railml_parser, track_data from data_formatting, circuitBorder_data from data_formatting, result_from_prep, name_for_XML_file:str
 # Output: None in command window, but the route xml file
 # Need: xml.etree.ElementTree, also run after railml_parser, data_formatting, segment_generator, route_generator_prep, route_generator, route_file_generator_prep, route_file_generator
 
 # timetable_route_finder:
-Add route that traffic needs into timetable xml file
+Add route that traffic needs into timetable xml file.
 ## Input: timetable file path, route data from route_parser
 ## Output: None in command window, but a new timetable xml file with route in it
 ## Need: xml.etree.ElementTree as ET, run after route_file_generator -> route_parser
+
+# min_area_generator:
+Generate the minimum maintenance area, based on the signal locations.
+## Input: tracks_info from railml parser
+## Output: main_line_area: min maintenance area on track line, connection: connection between areas, switch_area: area for switch, switch_connection: connection for each switch area, switch_cross: the x switch relation
+## Need: find_connection, run after railml parser
