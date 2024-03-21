@@ -6,6 +6,7 @@ import TimeTable_parser
 def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
     # Set a null matrix to store line_id, used_route, used_alternative for plotting
     lines_path = []
+    unarrangable_traffic = []
     # Get only name easier for matching
     borderName = [entry['Name'] for entry in circuitBorder]
     # Go through all line in lineTraffics
@@ -74,17 +75,19 @@ def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
                     # If traffic only last 1 hour, cannot be added, else maybe part of the traffic can be added in
                     if timeTo - timeFrom == 0:
                         print(f"line id '{line_id}' in timetable cannot be added in, as flow overload!")
+                        unarrangable_traffic.append(line_id)
                     else:
                         print(f"line id '{line_id}' in timetable cannot be added in, as flow overload! But consider break this line traffic into smaller time period!")
-    return usage, borderName, lines_path
+                        unarrangable_traffic.append(line_id)
+    return usage, borderName, lines_path, unarrangable_traffic
                         
-#'''
+'''
 # Example test
 lineTraffics = TimeTable_parser.parser('test_timetable.xml')
 routes = route_parser.parser('Katrineholm_Route.xml')
 track_info = railml_parser.parser('Katrineholm.railml.xml')
 [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(track_info)
-[usage, borderName, linesPath] = route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
+[usage, borderName, linesPath, unarrangable_traffic] = route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
 for i in range(0, len(borderName)):
     print(f"{borderName[i]}: {usage[i]}\n")
 a = []; b = []; c = []
@@ -94,4 +97,5 @@ for i in range(0, len(linesPath)):
     c.append(linesPath[i]['alternative id'])
 for j in range(0,len(a)):
     print(f"{a[j]}, {b[j]}, {c[j]}")
-#'''
+print(unarrangable_traffic)
+'''
