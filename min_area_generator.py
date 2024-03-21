@@ -1,5 +1,6 @@
 import railml_parser
 import find_connection
+import numpy as np
 
 def generator(tracks_info):
     #print(tracks_info)
@@ -108,8 +109,30 @@ def generator(tracks_info):
                 temp.append(i)
         switch_connection.append(temp)
     #print(switch_connection)
-    return main_line_area, connection, switch_area, switch_connection
+    # Find if switch cross each other
+    switch_cross = []
+    for area in switch_area:
+        y1, x1 = area[0][0], area[0][1]
+        y2, x2 = area[1][0], area[1][1]
+        temp = []
+        for i in range(0,len(switch_area)):
+            other = switch_area[i]
+            y3, x3 = other[0][0], other[0][1]
+            y4, x4 = other[1][0], other[1][1]
+            if area == other:
+                continue
+            px= ((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4)) / ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4)) 
+            py= ((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4)) / ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4))
+            if ((x1<=px<=x2 or x2<=px<=x1) and (y1<=py<=y2 or y2<=py<=y1))and((x3<=px<=x4 or x4<=px<=x3) and (y3<=py<=y4 or y4<=py<=y3)):
+                temp.append(i)
+        switch_cross.append(temp)
+    #print(switch_cross)
+    return main_line_area, connection, switch_area, switch_connection, switch_cross
+
+'''
 # Example test
 file_path = 'Katrineholm.railml.xml'
 tracks_info = railml_parser.parser(file_path)
-main_line_area, connection, switch_area, switch_connection = generator(tracks_info)
+main_line_area, connection, switch_area, switch_connection, switch_cross = generator(tracks_info)
+#print(main_line_area, connection, switch_area, switch_connection, switch_cross)
+'''
