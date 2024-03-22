@@ -124,6 +124,7 @@ def merger(main_line_area, connection, switch_area, switch_connection, switch_cr
         cancel_connection_switch.append(temp)
     return main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch
 
+'''
 # Example test
 file_path = 'Katrineholm.railml.xml'
 tracks_info = railml_parser.parser(file_path)
@@ -132,3 +133,4 @@ route_file_path = 'example.xml'
 routes = route_parser.parser(route_file_path)
 lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
 merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
+'''
