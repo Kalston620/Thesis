@@ -132,5 +132,5 @@ main_line_area, connection, switch_area, switch_connection, switch_cross = min_a
 route_file_path = 'example.xml'
 routes = route_parser.parser(route_file_path)
 lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
-merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
+[main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch] = merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
 '''
