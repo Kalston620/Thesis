@@ -69,7 +69,7 @@ def merger(main_line_area, connection, switch_area, switch_connection, switch_cr
                 print(f"  Alternative ID: {alternative['id']}, Platform: {alternative['platform']}, Nodes: {alternative['nodes']}")
         '''
         [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(tracks_info)
-        [usage, borderName, linesPath, unarrangable_traffic] = route_selection.route_selection(lineTraffics, new_routes, circuitBorder, usage, max_traffic)
+        [usage, borderName, linesPath, unarrangable_traffic] = route_selection.route_selection(result_TimeTable_parser, new_routes, circuitBorder, usage, max_traffic)
         main_line_close_unarrange.append(unarrangable_traffic)
     #print(main_line_close_unarrange)
     #for i in range(len(main_line_close_unarrange)):
@@ -133,4 +133,6 @@ route_file_path = 'example.xml'
 routes = route_parser.parser(route_file_path)
 lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
 [main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch] = merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
+print(main_line_close_unarrange, cancel_connection)
+print(switch_close_unarrange, cancel_connection_switch)
 '''
