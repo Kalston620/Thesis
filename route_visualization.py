@@ -10,6 +10,7 @@ def visualization(tracks_info, routes, lines_path, circuitBorder):
     borderName = [entry['Name'] for entry in circuitBorder]
     for i in range(0, len(lines_path)):
         layout_plot_track_only.plot_track_layout(tracks_info)
+        id = lines_path[i]['line id']
         used_route = lines_path[i]['route id']
         used_alternative = lines_path[i]['alternative id']
         for route in routes:
@@ -29,6 +30,7 @@ def visualization(tracks_info, routes, lines_path, circuitBorder):
                             [Y2, X2] = [int(circuitBorder[index2]['Y-axis']), int(circuitBorder[index2]['X_axis'])]
                             plt.plot([X1, X2], [Y1, Y2], linestyle='-', color='red', linewidth=3)
                             [Y1, X1] = [Y2, X2]
+                        plt.title(f'Visulization of line {id}')
                         plt.show()
 
 # Example test
