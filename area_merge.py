@@ -122,7 +122,7 @@ def merger(main_line_area, connection, switch_area, switch_connection, switch_cr
             if switch_close_unarrange[i] == switch_close_unarrange[j]:
                 temp.append(j)
         cancel_connection_switch.append(temp)
-    return main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch
+    return main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuits
 
 '''
 # Example test
@@ -132,7 +132,7 @@ main_line_area, connection, switch_area, switch_connection, switch_cross = min_a
 route_file_path = 'example.xml'
 routes = route_parser.parser(route_file_path)
 lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
-[main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch] = merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
+[main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuits] = merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
 print(main_line_close_unarrange, cancel_connection)
 print(switch_close_unarrange, cancel_connection_switch)
 '''
