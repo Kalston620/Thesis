@@ -122,7 +122,7 @@ def merger(main_line_area, connection, switch_area, switch_connection, switch_cr
             if switch_close_unarrange[i] == switch_close_unarrange[j]:
                 temp.append(j)
         cancel_connection_switch.append(temp)
-    return main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuits
+    return main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuit_switch_relation, circuits
 
 '''
 # Example test
