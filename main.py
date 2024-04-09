@@ -9,7 +9,6 @@ import route_generator_prep
 import link_graph_final_generator
 import min_area_categorize
 import cannot_merge_break
-from itertools import combinations
 
 file_path = 'Katrineholm.railml.xml'
 tracks_info = railml_parser.parser(file_path)
