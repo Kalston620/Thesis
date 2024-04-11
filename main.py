@@ -86,6 +86,62 @@ for areas in final:
 
 # Consider switches
 [can_merge, cannot_merge, single] = min_area_categorize.categorizer(switch_close_unarrange, cancel_connection_switch, circuit_switch_relation, tracks_info, routes, circuits, lineTraffics)
-print(f'{can_merge}\n{cannot_merge}\n{single}')
+#print(f'{can_merge}\n{cannot_merge}\n{single}')
 if cannot_merge != []:
     [can_merge, single] = cannot_merge_break.devider(can_merge, cannot_merge, single, switch_connection, switch_close_unarrange, circuit_switch_relation, circuits, routes, tracks_info, lineTraffics)
+# Consider crossing switch pair, and delete switch that is in final
+switch_pair = []
+for i in range(len(switch_cross)):
+    pair = switch_cross[i]
+    if pair != []:
+        pair.append(i)
+        pair = sorted(pair)
+    for switch in pair:
+        if switch in single:
+            single.remove(switch)
+        else:
+            temp = []
+            for group in can_merge:
+                if switch in group:
+                    if len(group) <= 2:
+                        single.append(group[1] if group[0] == switch else group[0])
+                        group = ()
+                    else:
+                        idx = group.index(switch)
+                        group = group[:idx] + group[idx+1:]
+                if group != ():
+                    temp.append(group)
+            can_merge = temp
+    if tuple(pair) not in switch_pair and pair != []:
+        switch_pair.append(tuple(pair))
+final_switch = switch_pair
+# See if can_merge actually can merge (based on start and end of switch is in same main line area)
+temp = []
+for group in can_merge:
+    group_connection = []
+    for switch in group:
+        group_connection.append(switch_connection[switch])
+    unique_tuples = set(tuple(sublist) for sublist in group_connection)
+    unique_group_connection = [list(t) for t in unique_tuples]
+    if len(unique_group_connection) == len(group_connection):
+        # No one can be merged
+        for switch in group:
+            final_switch.append(switch)
+    elif len(unique_group_connection) == 1:
+        # All can be merged
+        final_switch.append(group)
+    else:
+        # Some can be merged
+        for conn in unique_group_connection:
+            position = [index for index, connection in enumerate(group_connection) if connection == conn]
+            if len(position) == 1:
+                final_switch.append(group[position])
+            else:
+                temp = []
+                for pos in position:
+                    temp.append(group[pos])
+                final_switch.append(tuple(temp))
+# Sort final_switch and add single
+for item in single:
+    final_switch.append(item)
+final_switch = sorted(final_switch, key=lambda x: 1 if isinstance(x, int) else len(x))
