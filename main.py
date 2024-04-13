@@ -59,6 +59,7 @@ for areas in can_merge:
             else:
                 final.append(tuple(used_area))
                 areas = [area for area in areas if area not in used_area]  # update areas
+can_merge_main = can_merge
 # Get position
 final_pos = []
 for areas in final:
@@ -145,3 +146,60 @@ for group in can_merge:
 for item in single:
     final_switch.append(item)
 final_switch = sorted(final_switch, key=lambda x: 1 if isinstance(x, int) else len(x))
+# Consider the relation between switch and main line area
+switch_main_relation = [[] for _ in range(len(final_switch))]
+for i in range(len(final_switch)):
+    item = final_switch[i]
+    if isinstance(item, int):
+        start = switch_connection[item][0]
+        end = switch_connection[item][1]
+        for j in range(len(can_merge_main)):
+            group = can_merge_main[j]
+            if start in group and end in group:
+                switch_main_relation[i] = [j]
+    else:
+        for switch in item:
+            temp = []
+            b_sign = False
+            start = switch_connection[switch][0]
+            end = switch_connection[switch][1]
+            for j in range(len(can_merge_main)):
+                group = can_merge_main[j]
+                if start in group and end in group:
+                    temp.append(j)
+                else:
+                    b_sign = True
+                    break
+            if b_sign:
+                break
+        if len(temp) == len(item) and len(list(set(temp))) == 1:
+            switch_main_relation[i] = [j]
+#TODO: find real connection between switch and main area based on switch_main_relation and final
+same_color_min_area = {}
+same_color_final = {}
+for i in range(len(switch_main_relation)):
+    item = switch_main_relation[i]
+    if item != []:
+        group = can_merge_main[item[0]]
+        switch_group = final_switch[i]
+        if not isinstance(switch_group, int):
+            switch_group = switch_group[0]
+        conn = switch_connection[switch_group]
+        temp = []
+        temp1 = []
+        for item in conn:
+            if item in final:
+                # Then it is a single area
+                temp.append(item)
+                temp1.append(final.index(item))
+            else:
+                for area in final:
+                    if not isinstance(area, int):
+                        if item in area:
+                            temp1.append(final.index(area))
+                            for j in area:
+                                temp.append(j)
+        same_color_min_area[final_switch[i]] = temp
+        same_color_final[final_switch[i]] = temp1
+
+print(f'Mainline_final:\n{final}\nSwitch_final:\n{final_switch}\nSame block for switch and mainline:\n{same_color_min_area}\nSame block for switch and final:\n{same_color_final}')
