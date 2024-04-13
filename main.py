@@ -203,3 +203,4 @@ for i in range(len(switch_main_relation)):
         same_color_final[final_switch[i]] = temp1
 
 print(f'Mainline_final:\n{final}\nSwitch_final:\n{final_switch}\nSame block for switch and mainline:\n{same_color_min_area}\nSame block for switch and final:\n{same_color_final}')
+# TODO: Write visualization part
