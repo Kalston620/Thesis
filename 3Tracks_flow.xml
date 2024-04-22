@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lineTraffics>
-    <line id="1" name="1-2" start="b1" end="b2" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" />
-    <line id="2" name="4-3" start="b4" end="b3" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" />
+    <line id="1" name="2-1" start="b2" end="b1" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" />
+    <line id="2" name="3-4" start="b3" end="b4" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" />
 </lineTraffics>
