@@ -1,3 +1,5 @@
+from matplotlib import pyplot as plt
+import numpy as np
 import railml_parser
 import min_area_generator
 import route_parser
@@ -9,6 +11,7 @@ import route_generator_prep
 import link_graph_final_generator
 import min_area_categorize
 import cannot_merge_break
+import layout_plot_track_only
 
 file_path = 'Katrineholm.railml.xml'
 tracks_info = railml_parser.parser(file_path)
@@ -204,3 +207,47 @@ for i in range(len(switch_main_relation)):
 
 print(f'Mainline_final:\n{final}\nSwitch_final:\n{final_switch}\nSame block for switch and mainline:\n{same_color_min_area}\nSame block for switch and final:\n{same_color_final}')
 # TODO: Write visualization part
+layout_plot_track_only.plot_track_layout(tracks_info)
+# plot switch in different color
+color_store = [[] for _ in range(len(final))]
+for item in final_switch:
+    if isinstance(item, int):
+        # Single situation
+        x1 = switch_area[item][0][1]
+        x2 = switch_area[item][1][1]
+        y1 = switch_area[item][0][0]
+        y2 = switch_area[item][1][0]
+        color = np.random.rand(3,)
+        plt.plot([x1, x2], [y1, y2], color=color)
+        # If relate to main line area, store the color
+        if item in same_color_final:
+            areas = same_color_final[item]
+            for area in areas:
+                color_store[area] = color
+    else: 
+        # Group situation
+        color = np.random.rand(3,)
+        for switch in item:
+            x1 = switch_area[switch][0][1]
+            x2 = switch_area[switch][1][1]
+            y1 = switch_area[switch][0][0]
+            y2 = switch_area[switch][1][0]
+            plt.plot([x1, x2], [y1, y2], color=color)
+        if item in same_color_final:
+            areas = same_color_final[item]
+            for area in areas:
+                color_store[area] = color
+# Plot main line area in different color
+for i in range(len(final)):
+    item = final[i]
+    if len(color_store[i]) == 0:
+        color =  np.random.rand(3,)
+    else:
+        color = color_store[i]
+    x1 = final_pos[i][0][1]
+    x2 = final_pos[i][1][1]
+    y1 = final_pos[i][0][0]
+    y2 = final_pos[i][1][0]
+    plt.plot([x1, x2], [y1, y2], color=color)
+# Show plot
+plt.show()

@@ -115,33 +115,33 @@ def parser(file_path):
     # Return the extracted details
     return tracks_info
 
-'''
-# Example test:
-file_path = 'Katrineholm.railml.xml'
-tracks_info = parser(file_path)
 
-# Print extracted details
-for track_name, track_info in tracks_info.items():
-    print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Mian Direction: {track_info['mainDir']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
-    for connection_track in track_info['connection_track']:
-        print("    Connections:")
-        print(f"    id: {connection_track['id']}, ref: {connection_track['ref']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
-    print("Signals:")
-    for signal in track_info['signals']:
-        print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
-    print("Switches:")
-    for switch in track_info['switches']:
-        print(f"  Switch Name: {switch['name']}, Position: {switch['pos']}")
-        print("    Connections:")
-        for connection in switch['connection']:
-            print(f"    ID: {connection['id']}, Start: {connection['start_id']}, End: {connection['end_id']}, Course: {connection['course']}, Orientation: {connection['orientation']}")
-    print("Detectors:")
-    for detector in track_info['detectors']:
-        print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
-    print("Track circuit borders:")
-    for circuit in track_info['circuits']:
-        print(f"  Border id: {circuit['id']}, Position: {circuit['pos']}, AbsPosition: {circuit['absPos']}")
-    print("Platforms:")
-    for platform in track_info['platform']:
-        print(f"  Platform ID: {platform['id']}, Position: {platform['pos']}, AbsPosition: {platform['absPos']}, Length: {platform['length']}")
-'''
+# Example test:
+if __name__ == "__main__":
+    file_path = 'Katrineholm.railml.xml'
+    tracks_info = parser(file_path)
+
+    # Print extracted details
+    for track_name, track_info in tracks_info.items():
+        print(f"\nTrack: {track_name}, Track ID: {track_info['track_id']}, Mian Direction: {track_info['mainDir']}, Position Start: {track_info['pos_start']}, Position End: {track_info['pos_end']}")
+        for connection_track in track_info['connection_track']:
+            print("    Connections:")
+            print(f"    id: {connection_track['id']}, ref: {connection_track['ref']}, X: {connection_track['X_axis']}, Y: {connection_track['Y_axis']}")
+        print("Signals:")
+        for signal in track_info['signals']:
+            print(f"  Signal Name: {signal['name']}, Position: {signal['pos']}")
+        print("Switches:")
+        for switch in track_info['switches']:
+            print(f"  Switch Name: {switch['name']}, Position: {switch['pos']}")
+            print("    Connections:")
+            for connection in switch['connection']:
+                print(f"    ID: {connection['id']}, Start: {connection['start_id']}, End: {connection['end_id']}, Course: {connection['course']}, Orientation: {connection['orientation']}")
+        print("Detectors:")
+        for detector in track_info['detectors']:
+            print(f"  Detector Name: {detector['name']}, Position: {detector['pos']}")
+        print("Track circuit borders:")
+        for circuit in track_info['circuits']:
+            print(f"  Border id: {circuit['id']}, Position: {circuit['pos']}, AbsPosition: {circuit['absPos']}")
+        print("Platforms:")
+        for platform in track_info['platform']:
+            print(f"  Platform ID: {platform['id']}, Position: {platform['pos']}, AbsPosition: {platform['absPos']}, Length: {platform['length']}")
