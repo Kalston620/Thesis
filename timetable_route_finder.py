@@ -49,12 +49,13 @@ def finder(timetable_file_path:str, route_data_from_route_parser):
     new_tree.write(f"{timetable_file_path}_after_finder.xml", encoding="utf-8", xml_declaration=True)
 
 # Example test
-tracks_info = railml_parser.parser('Katrineholm.railml.xml')
-[track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
-pairs = segment_generator.pairing(connection_data, circuitBorder_data)
-[start_n_end, up_graph, down_graph, start_n_end_dir] = route_generator_prep.generator_prep(track_data, pairs)
-paths = route_generator.generator(start_n_end, start_n_end_dir, up_graph, down_graph)
-result = route_file_generator_prep.file_generator_prep(paths, pairs, start_n_end_dir, track_data)
-route_file_generator.generator(tracks_info, track_data, circuitBorder_data, result, "example")
-routes = route_parser.parser('example.xml')
-finder('test.xml', routes)
+if __name__ == "__main__":
+    tracks_info = railml_parser.parser('3Tracks.railml.xml')
+    [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
+    pairs = segment_generator.pairing(connection_data, circuitBorder_data)
+    [start_n_end, up_graph, down_graph, start_n_end_dir] = route_generator_prep.generator_prep(track_data, pairs)
+    paths = route_generator.generator(start_n_end, start_n_end_dir, up_graph, down_graph)
+    result = route_file_generator_prep.file_generator_prep(paths, pairs, start_n_end_dir, track_data)
+    route_file_generator.generator(tracks_info, track_data, circuitBorder_data, result, "3Tracks_result")
+    routes = route_parser.parser('3Tracks_result.xml')
+    finder('3Tracks_flow.xml', routes)
