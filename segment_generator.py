@@ -31,16 +31,18 @@ def pairing(connection_data, circuitBorder_data):
     circuitBorder_data_set = set(tuple(item.items()) for item in circuitBorder_data)
     difference_circuitBorder_data = [dict(item) for item in (circuitBorder_data_set - used_set)]
     for diff_item in difference_circuitBorder_data:
-        if diff_item['dir'] == 'up':
-            for conn_item in connection_data:
-                if diff_item['Y'] == conn_item['Y_axis'] and float(diff_item['absPos']) == conn_item['X_axis']:
-                    for other_conn_item in connection_data:
-                        if other_conn_item['id'] == conn_item['ref']:
-                            for other_diff_item in difference_circuitBorder_data:
-                                if other_diff_item['Y'] == other_conn_item['Y_axis'] and float(other_diff_item['absPos']) == other_conn_item['X_axis']:
-                                    pairs.append((diff_item, other_diff_item))
-                                    used.append(diff_item)
-                                    used.append(other_diff_item)
+        if diff_item not in used:
+            if diff_item['dir'] == 'up':
+                for conn_item in connection_data:
+                    if diff_item['Y'] == conn_item['Y_axis'] and float(diff_item['absPos']) == conn_item['X_axis']:
+                        for other_conn_item in connection_data:
+                            if other_conn_item['id'] == conn_item['ref']:
+                                for other_diff_item in difference_circuitBorder_data:
+                                    if other_diff_item['Y'] == other_conn_item['Y_axis'] and float(other_diff_item['absPos']) == other_conn_item['X_axis']:
+                                        if other_diff_item not in used and diff_item not in used:
+                                            pairs.append((diff_item, other_diff_item))
+                                            used.append(diff_item)
+                                            used.append(other_diff_item)
     return pairs
 
 '''
