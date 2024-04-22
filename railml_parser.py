@@ -118,7 +118,7 @@ def parser(file_path):
 
 # Example test:
 if __name__ == "__main__":
-    file_path = 'Katrineholm.railml.xml'
+    file_path = '3Tracks.railml.xml'
     tracks_info = parser(file_path)
 
     # Print extracted details
