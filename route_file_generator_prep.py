@@ -41,6 +41,9 @@ def file_generator_prep(total_path, pairs, start_n_end_dir, tracks_data):
                     up_count = up_count + 1
                 elif tracks_data[node['Y']]['Direction'] == "down":
                     down_count = down_count + 1
+                elif tracks_data[node['Y']]['Direction'] == "none":
+                    up_count = up_count + 1
+                    down_count = down_count + 1
                 else:
                     print("Warning, direction error! /43")
             if up_count + down_count != len(alternative):
