@@ -34,9 +34,9 @@ def visualization(tracks_info, routes, lines_path, circuitBorder):
                         plt.show()
 
 # Example test
-tracks_info = railml_parser.parser('Katrineholm.railml.xml')
-routes = route_parser.parser('example.xml')
+tracks_info = railml_parser.parser('3Tracks.railml.xml')
+routes = route_parser.parser('3Tracks_result.xml')
 [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(tracks_info)
-lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
+lineTraffics = TimeTable_parser.parser('3Tracks_flow.xml_after_finder.xml')
 [usage, borderName, lines_path, unarrangable_traffic] = route_selection.route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
 visualization(tracks_info, routes, lines_path, circuitBorder)
