@@ -78,13 +78,13 @@ def generator(tracks_info, track_data, circuitBorder_data_from_formatting, resul
     # Write the file
     tree = ET.ElementTree(root)
     tree.write(f"{name_for_XML_file}.xml", encoding="utf-8", xml_declaration=True)
-'''
+
 # Example test
-tracks_info = railml_parser.parser('Katrineholm.railml.xml')
-[track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
-pairs = segment_generator.pairing(connection_data, circuitBorder_data)
-[start_n_end, up_graph, down_graph, start_n_end_dir] = route_generator_prep.generator_prep(track_data, pairs)
-paths = route_generator.generator(start_n_end, start_n_end_dir, up_graph, down_graph)
-result = route_file_generator_prep.file_generator_prep(paths, pairs, start_n_end_dir, track_data)
-generator(tracks_info, track_data, circuitBorder_data, result, "example")
-'''
+if __name__ == "__main__":
+    tracks_info = railml_parser.parser('3Tracks.railml.xml')
+    [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
+    pairs = segment_generator.pairing(connection_data, circuitBorder_data)
+    [start_n_end, up_graph, down_graph, start_n_end_dir] = route_generator_prep.generator_prep(track_data, pairs)
+    paths = route_generator.generator(start_n_end, start_n_end_dir, up_graph, down_graph)
+    result = route_file_generator_prep.file_generator_prep(paths, pairs, start_n_end_dir, track_data)
+    generator(tracks_info, track_data, circuitBorder_data, result, "3Tracks_result")
