@@ -1,0 +1,2 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lineTraffics><line id="1" name="2-1" start="b2" end="b1" route="1" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" /><line id="2" name="3-4" start="b3" end="b4" route="2" timeFrom="00" timeTo="23" freq="10" stop="True" priority="1" /></lineTraffics>
