@@ -34,6 +34,7 @@ def file_generator_prep(total_path, pairs, start_n_end_dir, tracks_data):
         for alternative in route:
             up_count = 0
             down_count = 0
+            none_count = 0
             #print(alternative)
             for node in alternative:
                 #print(node)
@@ -44,10 +45,11 @@ def file_generator_prep(total_path, pairs, start_n_end_dir, tracks_data):
                 elif tracks_data[node['Y']]['Direction'] == "none":
                     up_count = up_count + 1
                     down_count = down_count + 1
+                    none_count = none_count + 1
                 else:
-                    print("Warning, direction error! /43")
-            if up_count + down_count != len(alternative):
-                print("warning, count error! /45")    
+                    print("Warning, direction error! /50")
+            if up_count + down_count - none_count != len(alternative):
+                print("warning, count error! /52")    
             direction_param = up_count/(up_count + down_count)
             dir_paprm_arr.append(direction_param)
         if route_dir == 'up':
