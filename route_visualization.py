@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 def visualization(tracks_info, routes, lines_path, circuitBorder):
     borderName = [entry['Name'] for entry in circuitBorder]
     for i in range(0, len(lines_path)):
+        plt.figure()
         layout_plot_track_only.plot_track_layout(tracks_info)
         id = lines_path[i]['line id']
         used_route = lines_path[i]['route id']
