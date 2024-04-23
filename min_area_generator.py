@@ -51,6 +51,11 @@ def generator(tracks_info):
             node_pos = [signal[1] for signal in signals]
             node_pos.insert(0,pos_start)
             node_pos.append(pos_end)
+        elif main_dir == 'none':
+            # New array, add start and end position of track, sort by position
+            node_pos = [signal[1] for signal in signals]
+            node_pos.insert(0,pos_start)
+            node_pos.append(pos_end)
         else:
             print("Track Main direction error!")
             break
@@ -120,10 +125,11 @@ def generator(tracks_info):
             y4, x4 = other[1][0], other[1][1]
             if area == other:
                 continue
-            px= ((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4)) / ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4)) 
-            py= ((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4)) / ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4))
-            if ((x1<=px<=x2 or x2<=px<=x1) and (y1<=py<=y2 or y2<=py<=y1))and((x3<=px<=x4 or x4<=px<=x3) and (y3<=py<=y4 or y4<=py<=y3)):
-                temp.append(i)
+            if ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4)) != 0:
+                px= ((x1*y2-y1*x2)*(x3-x4)-(x1-x2)*(x3*y4-y3*x4)) / ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4)) 
+                py= ((x1*y2-y1*x2)*(y3-y4)-(y1-y2)*(x3*y4-y3*x4)) / ((x1-x2)*(y3-y4)-(y1-y2)*(x3-x4))
+                if ((x1<=px<=x2 or x2<=px<=x1) and (y1<=py<=y2 or y2<=py<=y1))and((x3<=px<=x4 or x4<=px<=x3) and (y3<=py<=y4 or y4<=py<=y3)):
+                    temp.append(i)
         switch_cross.append(temp)
     #print(switch_cross)
     return main_line_area, connection, switch_area, switch_connection, switch_cross
