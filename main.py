@@ -12,16 +12,39 @@ import link_graph_final_generator
 import min_area_categorize
 import cannot_merge_break
 import layout_plot_track_only
+import timetable_route_finder
+import route_file_generator
+import route_file_generator_prep
+import route_generator
+import route_selection
+import route_visualization
+import usage_matrix_gererator
 
-file_path = 'Katrineholm.railml.xml'
+file_path = '3Tracks.railml.xml'
+route_file_path = '3Tracks_route'
+flow_file_path = '3Tracks_flow.xml'
+# Start from parse the infra data
 tracks_info = railml_parser.parser(file_path)
 [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
 pairs = segment_generator.pairing(connection_data, circuitBorder_data)
 [start_n_end, up_graph, down_graph, start_n_end_dir] = route_generator_prep.generator_prep(track_data, pairs)
 main_line_area, connection, switch_area, switch_connection, switch_cross = min_area_generator.generator(tracks_info)
-route_file_path = 'example.xml'
+paths = route_generator.generator(start_n_end, start_n_end_dir, up_graph, down_graph)
+result = route_file_generator_prep.file_generator_prep(paths, pairs, start_n_end_dir, track_data)
+route_file_generator.generator(tracks_info, track_data, circuitBorder_data, result, route_file_path)
+# Generate the route file
+route_file_path = route_file_path + '.xml'
 routes = route_parser.parser(route_file_path)
-lineTraffics = TimeTable_parser.parser('test.xml_after_finder.xml')
+# Add assigned route to flow file
+timetable_route_finder.finder(flow_file_path, routes)
+flow_file_path_after_finder = flow_file_path + '_after_finder.xml'
+# Parse flow file
+lineTraffics = TimeTable_parser.parser(flow_file_path_after_finder)
+# Visualization before close segments
+[circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(tracks_info)
+[usage, borderName, lines_path, unarrangable_traffic] = route_selection.route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
+route_visualization.visualization(tracks_info, routes, lines_path, circuitBorder)
+
 main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuit_switch_relation, circuits = area_merge.merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
 
 # Categorize min areas: same behaviour & can be merged, same behaviour & cannot be merged, single area
