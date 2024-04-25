@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Wang"
+  given-names: "Yunhe"
+title: "Railway station maintenance area designer"
+version: 1.0
+date-released: 2024-04-25
+url: "https://github.com/Kalston620/Thesis"
