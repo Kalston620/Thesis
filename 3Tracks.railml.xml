@@ -21,7 +21,7 @@
             </trackTopology>
             <trackElements>
                 <platformEdges>
-                    <platformEdge id="Sp1" pos="350.0" absPos="350.0" lengt="300" />
+                    <platformEdge id="Sp1" pos="350.0" absPos="350.0" length="300" />
                 </platformEdges>
             </trackElements>
             <ocsElements>
@@ -54,7 +54,7 @@
             </trackTopology>
             <trackElements>
                 <platformEdges>
-                    <platformEdge id="Sp2" pos="50.0" absPos="350.0" lengt="300" />
+                    <platformEdge id="Sp2" pos="50.0" absPos="350.0" length="300" />
                 </platformEdges>
             </trackElements>
             <ocsElements>
@@ -91,7 +91,7 @@
             </trackTopology>
             <trackElements>
                 <platformEdges>
-                    <platformEdge id="Sp3" pos="350.0" absPos="350.0" lengt="300" />
+                    <platformEdge id="Sp3" pos="350.0" absPos="350.0" length="300" />
                 </platformEdges>
             </trackElements>
             <ocsElements>
