@@ -42,6 +42,7 @@ flow_file_path_after_finder = flow_file_path + '_after_finder.xml'
 lineTraffics = TimeTable_parser.parser(flow_file_path_after_finder)
 # Visualization before close segments
 [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(tracks_info)
+#usage[4] = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 [usage, borderName, lines_path, unarrangable_traffic] = route_selection.route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
 route_visualization.visualization(tracks_info, routes, lines_path, circuitBorder)
 
