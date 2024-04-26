@@ -81,21 +81,22 @@ def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
                         unarrangable_traffic.append(line_id)
     return usage, borderName, lines_path, unarrangable_traffic
                         
-'''
+
 # Example test
-lineTraffics = TimeTable_parser.parser('test_timetable.xml')
-routes = route_parser.parser('Katrineholm_Route.xml')
-track_info = railml_parser.parser('Katrineholm.railml.xml')
-[circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(track_info)
-[usage, borderName, linesPath, unarrangable_traffic] = route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
-for i in range(0, len(borderName)):
-    print(f"{borderName[i]}: {usage[i]}\n")
-a = []; b = []; c = []
-for i in range(0, len(linesPath)):
-    a.append(linesPath[i]['line id'])
-    b.append(linesPath[i]['route id'])
-    c.append(linesPath[i]['alternative id'])
-for j in range(0,len(a)):
-    print(f"{a[j]}, {b[j]}, {c[j]}")
-print(unarrangable_traffic)
-'''
+if __name__ == '__main__':
+    lineTraffics = TimeTable_parser.parser('3Tracks_flow.xml_after_finder.xml')
+    routes = route_parser.parser('3Tracks_route.xml')
+    track_info = railml_parser.parser('3Tracks.railml.xml')
+    [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(track_info)
+    usage[4] = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
+    [usage, borderName, linesPath, unarrangable_traffic] = route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
+    for i in range(0, len(borderName)):
+        print(f"{borderName[i]}: {usage[i]}\n")
+    a = []; b = []; c = []
+    for i in range(0, len(linesPath)):
+        a.append(linesPath[i]['line id'])
+        b.append(linesPath[i]['route id'])
+        c.append(linesPath[i]['alternative id'])
+    for j in range(0,len(a)):
+        print(f"{a[j]}, {b[j]}, {c[j]}")
+    print(unarrangable_traffic)
