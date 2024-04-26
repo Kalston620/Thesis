@@ -34,10 +34,13 @@
                     <trackCircuitBorder id="1-2" pos="200.0" absPos="200.0" name="1-2" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="1-3" pos="200.0" absPos="200.0" name="1-3" dir="up" insulatedRail="right" />
                     <trackCircuitBorder id="1-4" pos="200.0" absPos="200.0" name="1-4" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="1-5" pos="800.0" absPos="800.0" name="1-5" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="1-6" pos="800.0" absPos="800.0" name="1-6" dir="down" insulatedRail="right" />
-                    <trackCircuitBorder id="1-7" pos="800.0" absPos="800.0" name="1-7" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="1-8" pos="1000.0" absPos="1000.0" name="1-8" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="1-5" pos="500.0" absPos="500.0" name="1-5" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="1-6" pos="500.0" absPos="500.0" name="1-6" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="1-7" pos="800.0" absPos="800.0" name="1-7" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="1-8" pos="800.0" absPos="800.0" name="1-8" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="1-9" pos="800.0" absPos="800.0" name="1-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="1-10" pos="1000.0" absPos="1000.0" name="1-10" dir="down" insulatedRail="none" />
+
                 </trainDetectionElements>
             </ocsElements>
         </track>
@@ -104,10 +107,12 @@
                     <trackCircuitBorder id="3-2" pos="200.0" absPos="200.0" name="3-2" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="3-3" pos="200.0" absPos="200.0" name="3-3" dir="up" insulatedRail="right" />
                     <trackCircuitBorder id="3-4" pos="200.0" absPos="200.0" name="3-4" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="3-5" pos="800.0" absPos="800.0" name="3-5" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="3-6" pos="800.0" absPos="800.0" name="3-6" dir="down" insulatedRail="right" />
-                    <trackCircuitBorder id="3-7" pos="800.0" absPos="800.0" name="3-7" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="3-8" pos="1000.0" absPos="1000.0" name="3-8" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-5" pos="500.0" absPos="500.0" name="3-5" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-6" pos="500.0" absPos="500.0" name="3-6" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-7" pos="800.0" absPos="800.0" name="3-7" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-8" pos="800.0" absPos="800.0" name="3-8" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="3-9" pos="800.0" absPos="800.0" name="3-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-10" pos="1000.0" absPos="1000.0" name="3-10" dir="down" insulatedRail="none" />
                 </trainDetectionElements>
             </ocsElements>
         </track>
