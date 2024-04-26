@@ -1,3 +1,4 @@
+import copy
 import railml_parser
 import usage_matrix_gererator
 import route_parser
@@ -38,11 +39,11 @@ def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
                     # Check if need to stop
                     if stop:
                         if platform:
-                            temp = usage
+                            temp = copy.deepcopy(usage)
                             # Go through nodes to check if overload traffic
                             for node in nodes:
                                 index = borderName.index(node)
-                                node_24h_flow = temp[index]
+                                node_24h_flow = copy.deepcopy(temp[index])
                                 for i in range(timeFrom,timeTo+1):
                                     node_24h_flow[i] = node_24h_flow[i] + frequency
                                     # If overload, return to previous state and jump out
@@ -56,7 +57,8 @@ def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
                                 if flow_overload:
                                     break
                                 temp[index] = node_24h_flow
-                            usage = temp
+                            if not flow_overload:
+                                usage = copy.deepcopy(temp)
                             path_data = {'line id': line_id,
                                          'route id': route_id,
                                          'alternative id': alternative_id}
