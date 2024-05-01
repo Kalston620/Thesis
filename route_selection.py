@@ -62,6 +62,30 @@ def route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic):
                             path_data = {'line id': line_id,
                                          'route id': route_id,
                                          'alternative id': alternative_id}
+                    else:
+                        temp = copy.deepcopy(usage)
+                        # Go through nodes to check if overload traffic
+                        for node in nodes:
+                            index = borderName.index(node)
+                            node_24h_flow = copy.deepcopy(temp[index])
+                            for i in range(timeFrom,timeTo+1):
+                                node_24h_flow[i] = node_24h_flow[i] + frequency
+                                # If overload, return to previous state and jump out
+                                if node_24h_flow[i] > max_traffic:
+                                    node_24h_flow[i] = node_24h_flow[i] - frequency
+                                    # Put a jump indicator
+                                    flow_overload = True
+                                    break
+                                else:
+                                    flow_overload = False
+                            if flow_overload:
+                                break
+                            temp[index] = node_24h_flow
+                        if not flow_overload:
+                            usage = copy.deepcopy(temp)
+                        path_data = {'line id': line_id,
+                                     'route id': route_id,
+                                     'alternative id': alternative_id}
                     try:
                         # If jump indicator is true, add 1 to overload counter
                         if not flow_overload:
