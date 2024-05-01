@@ -20,9 +20,9 @@ import route_selection
 import route_visualization
 import usage_matrix_gererator
 
-file_path = '3Tracks.railml.xml'
-route_file_path = '3Tracks_route'
-flow_file_path = '3Tracks_flow.xml'
+file_path = 'Katrineholm.railml.xml'
+route_file_path = 'Katrineholm_Route'
+flow_file_path = 'Katrineholm_TimeTable.xml'
 # Start from parse the infra data
 tracks_info = railml_parser.parser(file_path)
 [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
