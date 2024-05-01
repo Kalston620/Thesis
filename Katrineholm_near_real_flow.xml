@@ -63,7 +63,7 @@
     <line id="55" name="Tågab, Karlstad2Stockholm" start="VS01W" end="VS01E" timeFrom="11" timeTo="11" freq="1" stop="True" priority="2" />
     <line id="56" name="Tågab, Stockholm2Karlstad" start="VS02E" end="VS02W" timeFrom="15" timeTo="15" freq="1" stop="True" priority="2" />
     <line id="57" name="Fright train, to Nrk" start="VS02E" end="SS02" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
-    <line id="58" name="Fright train, from Nrk" start="SS01" end="VS01W" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
+    <line id="58" name="Fright train, from Nrk" start="SS01" end="VS01E" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
     <line id="59" name="Fright train, to Hls" start="VS02E" end="VS02W" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
-    <line id="60" name="Fright train, from Hls" start="VS01w" end="VS01E" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
+    <line id="60" name="Fright train, from Hls" start="VS01W" end="VS01E" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
 </lineTraffics>
