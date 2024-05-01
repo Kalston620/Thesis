@@ -1,65 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lineTraffics>
-    <line id="1" name="Mälartåg, Linköping2Sala" start="SS01" end="VS01E" route="2" timeFrom="06" timeTo="22" freq="1" stop="True" priority="2"/>
+    <line id="1" name="Mälartåg, Linköping2Sala" start="SS01" end="VS01E" timeFrom="06" timeTo="22" freq="1" stop="True" priority="2"/>
         <!-- Some train start from Norrköping and/or end at Västerås -->
-    <line id="2" name="Mälartåg, Sala2Linköping" start="VS02E" end="SS02" route="1" timeFrom="06" timeTo="21" freq="1" stop="True" priority="2"/>
+    <line id="2" name="Mälartåg, Sala2Linköping" start="VS02E" end="SS02" timeFrom="06" timeTo="21" freq="1" stop="True" priority="2"/>
         <!-- Some train start from Västerås and/or end at Norrköping -->
-    <line id="3" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="05" timeTo="07" freq="1" stop="True" priority="2"/>
-    <line id="4" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="09" timeTo="09" freq="1" stop="True" priority="2"/>
-    <line id="5" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="10" timeTo="10" freq="1" stop="True" priority="2"/>
-    <line id="6" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="12" timeTo="12" freq="1" stop="True" priority="2"/>
-    <line id="7" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="14" timeTo="18" freq="1" stop="True" priority="2"/>
-    <line id="8" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="20" timeTo="20" freq="1" stop="True" priority="2"/>
+    <line id="3" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" timeFrom="05" timeTo="07" freq="1" stop="True" priority="2"/>
+    <line id="4" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" timeFrom="09" timeTo="09" freq="1" stop="True" priority="2"/>
+    <line id="5" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" timeFrom="10" timeTo="10" freq="1" stop="True" priority="2"/>
+    <line id="6" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" timeFrom="12" timeTo="12" freq="1" stop="True" priority="2"/>
+    <line id="7" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" timeFrom="14" timeTo="18" freq="1" stop="True" priority="2"/>
+    <line id="8" name="Mälartåg, Hallsberg2Stockholm" start="VS01W" end="VS01E" timeFrom="20" timeTo="20" freq="1" stop="True" priority="2"/>
         <!-- Some train start from Vingåker -->
-    <line id="9" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" route="3" timeFrom="06" timeTo="07" freq="1" stop="True" priority="2" />
-    <line id="10" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" route="3" timeFrom="09" timeTo="09" freq="1" stop="True" priority="2" />
-    <line id="11" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" route="3" timeFrom="10" timeTo="10" freq="1" stop="True" priority="2" />
-    <line id="12" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" route="3" timeFrom="12" timeTo="12" freq="1" stop="True" priority="2" />
-    <line id="13" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" route="3" timeFrom="14" timeTo="21" freq="1" stop="True" priority="2" />
-    <line id="14" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" route="3" timeFrom="23" timeTo="23" freq="1" stop="True" priority="2" />
+    <line id="9" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" timeFrom="06" timeTo="07" freq="1" stop="True" priority="2" />
+    <line id="10" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" timeFrom="09" timeTo="09" freq="1" stop="True" priority="2" />
+    <line id="11" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" timeFrom="10" timeTo="10" freq="1" stop="True" priority="2" />
+    <line id="12" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" timeFrom="12" timeTo="12" freq="1" stop="True" priority="2" />
+    <line id="13" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" timeFrom="14" timeTo="21" freq="1" stop="True" priority="2" />
+    <line id="14" name="Mälartåg, Stockholm2Halleberg" start="VS02E" end="VS02W" timeFrom="23" timeTo="23" freq="1" stop="True" priority="2" />
         <!-- Some train start from Katrineholm or end at Vingåker -->
-    <line id="15" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="08" timeTo="08" freq="1" stop="True" priority="1" />
-    <line id="16" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="10" timeTo="10" freq="1" stop="True" priority="1" />
-    <line id="17" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
-    <line id="18" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
-    <line id="19" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="17" timeTo="17" freq="1" stop="True" priority="1" />
-    <line id="20" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="19" timeTo="20" freq="1" stop="True" priority="1" />
-    <line id="21" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="07" timeTo="07" freq="1" stop="True" priority="1" />
-    <line id="22" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="09" timeTo="09" freq="1" stop="True" priority="1" />
-    <line id="23" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="11" timeTo="11" freq="1" stop="True" priority="1" />
-    <line id="24" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
-    <line id="25" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
-    <line id="26" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="18" timeTo="18" freq="1" stop="True" priority="1" />
-    <line id="27" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="22" timeTo="22" freq="1" stop="True" priority="1" />
+    <line id="15" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="08" timeTo="08" freq="1" stop="True" priority="1" />
+    <line id="16" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="10" timeTo="10" freq="1" stop="True" priority="1" />
+    <line id="17" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
+    <line id="18" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
+    <line id="19" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="17" timeTo="17" freq="1" stop="True" priority="1" />
+    <line id="20" name="MTRX, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="19" timeTo="20" freq="1" stop="True" priority="1" />
+    <line id="21" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="07" timeTo="07" freq="1" stop="True" priority="1" />
+    <line id="22" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="09" timeTo="09" freq="1" stop="True" priority="1" />
+    <line id="23" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="11" timeTo="11" freq="1" stop="True" priority="1" />
+    <line id="24" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
+    <line id="25" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
+    <line id="26" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="18" timeTo="18" freq="1" stop="True" priority="1" />
+    <line id="27" name="MTRX, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="22" timeTo="22" freq="1" stop="True" priority="1" />
         <!-- Some train start from Solna -->
-    <line id="28" name="SJ IC, Karlstad2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="08" timeTo="08" freq="1" stop="True" priority="2" />
-    <line id="29" name="SJ IC, Karlstad2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="18" timeTo="18" freq="1" stop="True" priority="2" />
-    <line id="30" name="SJ IC, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="12" timeTo="12" freq="1" stop="True" priority="2" />
-    <line id="31" name="SJ IC, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="19" timeTo="19" freq="1" stop="True" priority="2" />
-    <line id="32" name="SJ IC, Stockholm2Karlstad" start="VS02E" end="VS02W" route="3" timeFrom="20" timeTo="20" freq="1" stop="True" priority="2" />
-    <line id="33" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="07" timeTo="09" freq="1" stop="True" priority="1" />
-    <line id="34" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="11" timeTo="12" freq="1" stop="True" priority="1" />
-    <line id="35" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="14" timeTo="18" freq="1" stop="True" priority="1" />
-    <line id="36" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="20" timeTo="22" freq="1" stop="True" priority="1" />
-    <line id="37" name="SJ Snabb, Karlstad2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="14" timeTo="14" freq="1" stop="True" priority="1" />
-    <line id="38" name="SJ Snabb, Linköping2Stockholm" start="SS01" end="VS01E" route="2" timeFrom="06" timeTo="06" freq="1" stop="True" priority="1" />
-    <line id="39" name="SJ Snabb, Malmö2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="10" timeTo="10" freq="1" stop="True" priority="1" />
-    <line id="40" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="10" timeTo="10" freq="1" stop="True" priority="1" />
-    <line id="41" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="16" timeTo="16" freq="1" stop="True" priority="1" />
-    <line id="42" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="21" timeTo="21" freq="1" stop="True" priority="1" />
-    <line id="43" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="06" timeTo="07" freq="1" stop="True" priority="1" />
-    <line id="44" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="09" timeTo="11" freq="1" stop="True" priority="1" />
-    <line id="45" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
-    <line id="46" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
-    <line id="47" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="16" timeTo="19" freq="1" stop="True" priority="1" />
-    <line id="48" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" route="3" timeFrom="22" timeTo="22" freq="1" stop="True" priority="1" />
+    <line id="28" name="SJ IC, Karlstad2Stockholm" start="VS01W" end="VS01E" timeFrom="08" timeTo="08" freq="1" stop="True" priority="2" />
+    <line id="29" name="SJ IC, Karlstad2Stockholm" start="VS01W" end="VS01E" timeFrom="18" timeTo="18" freq="1" stop="True" priority="2" />
+    <line id="30" name="SJ IC, Oslo2Stockholm" start="VS01W" end="VS01E" timeFrom="12" timeTo="12" freq="1" stop="True" priority="2" />
+    <line id="31" name="SJ IC, Oslo2Stockholm" start="VS01W" end="VS01E" timeFrom="19" timeTo="19" freq="1" stop="True" priority="2" />
+    <line id="32" name="SJ IC, Stockholm2Karlstad" start="VS02E" end="VS02W" timeFrom="20" timeTo="20" freq="1" stop="True" priority="2" />
+    <line id="33" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="07" timeTo="09" freq="1" stop="True" priority="1" />
+    <line id="34" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="11" timeTo="12" freq="1" stop="True" priority="1" />
+    <line id="35" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="14" timeTo="18" freq="1" stop="True" priority="1" />
+    <line id="36" name="SJ Snabb, Göteborg2Stockholm" start="VS01W" end="VS01E" timeFrom="20" timeTo="22" freq="1" stop="True" priority="1" />
+    <line id="37" name="SJ Snabb, Karlstad2Stockholm" start="VS01W" end="VS01E" timeFrom="14" timeTo="14" freq="1" stop="True" priority="1" />
+    <line id="38" name="SJ Snabb, Linköping2Stockholm" start="SS01" end="VS01E" timeFrom="06" timeTo="06" freq="1" stop="True" priority="1" />
+    <line id="39" name="SJ Snabb, Malmö2Stockholm" start="VS01W" end="VS01E" timeFrom="10" timeTo="10" freq="1" stop="True" priority="1" />
+    <line id="40" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" timeFrom="10" timeTo="10" freq="1" stop="True" priority="1" />
+    <line id="41" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" timeFrom="16" timeTo="16" freq="1" stop="True" priority="1" />
+    <line id="42" name="SJ Snabb, Oslo2Stockholm" start="VS01W" end="VS01E" timeFrom="21" timeTo="21" freq="1" stop="True" priority="1" />
+    <line id="43" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="06" timeTo="07" freq="1" stop="True" priority="1" />
+    <line id="44" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="09" timeTo="11" freq="1" stop="True" priority="1" />
+    <line id="45" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="13" timeTo="13" freq="1" stop="True" priority="1" />
+    <line id="46" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="15" timeTo="15" freq="1" stop="True" priority="1" />
+    <line id="47" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="16" timeTo="19" freq="1" stop="True" priority="1" />
+    <line id="48" name="SJ Snabb, Stockholm2Göteborg" start="VS02E" end="VS02W" timeFrom="22" timeTo="22" freq="1" stop="True" priority="1" />
         <!-- Some train end at Uddevalla -->
-    <line id="49" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" route="3" timeFrom="07" timeTo="07" freq="1" stop="True" priority="1" />
-    <line id="50" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" route="3" timeFrom="11" timeTo="11" freq="1" stop="True" priority="1" />
-    <line id="51" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" route="3" timeFrom="16" timeTo="16" freq="1" stop="True" priority="1" />
-    <line id="52" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" route="3" timeFrom="19" timeTo="19" freq="1" stop="True" priority="1" />
-    <line id="53" name="SJ Snabb, Stockholm2Karlstad" start="VS02E" end="VS02W" route="3" timeFrom="18" timeTo="18" freq="1" stop="True" priority="1" />
-    <line id="54" name="SJ Snabb, Stockholm2Malmö" start="VS02E" end="SS02" route="1" timeFrom="21" timeTo="21" freq="1" stop="True" priority="1" />
-    <line id="55" name="Tågab, Karlstad2Stockholm" start="VS01W" end="VS01E" route="4" timeFrom="11" timeTo="11" freq="1" stop="True" priority="2" />
-    <line id="56" name="Tågab, Stockholm2Karlstad" start="VS02E" end="VS02W" route="3" timeFrom="15" timeTo="15" freq="1" stop="True" priority="2" />
+    <line id="49" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" timeFrom="07" timeTo="07" freq="1" stop="True" priority="1" />
+    <line id="50" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" timeFrom="11" timeTo="11" freq="1" stop="True" priority="1" />
+    <line id="51" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" timeFrom="16" timeTo="16" freq="1" stop="True" priority="1" />
+    <line id="52" name="SJ Snabb, Stockholm2Oslo" start="VS02E" end="VS02W" timeFrom="19" timeTo="19" freq="1" stop="True" priority="1" />
+    <line id="53" name="SJ Snabb, Stockholm2Karlstad" start="VS02E" end="VS02W" timeFrom="18" timeTo="18" freq="1" stop="True" priority="1" />
+    <line id="54" name="SJ Snabb, Stockholm2Malmö" start="VS02E" end="SS02" timeFrom="21" timeTo="21" freq="1" stop="True" priority="1" />
+    <line id="55" name="Tågab, Karlstad2Stockholm" start="VS01W" end="VS01E" timeFrom="11" timeTo="11" freq="1" stop="True" priority="2" />
+    <line id="56" name="Tågab, Stockholm2Karlstad" start="VS02E" end="VS02W" timeFrom="15" timeTo="15" freq="1" stop="True" priority="2" />
+    <line id="57" name="Fright train, to Nrk" start="VS02E" end="SS02" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
+    <line id="58" name="Fright train, from Nrk" start="SS01" end="VS01W" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
+    <line id="59" name="Fright train, to Hls" start="VS02E" end="VS02W" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
+    <line id="60" name="Fright train, from Hls" start="VS01w" end="VS01E" timeFrom="00" timeTo="23" freq="1" stop="False" priority="3" />
 </lineTraffics>
