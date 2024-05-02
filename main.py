@@ -44,6 +44,7 @@ lineTraffics = TimeTable_parser.parser(flow_file_path_after_finder)
 [circuitBorder, usage, max_traffic] = usage_matrix_gererator.usage_matrix_generator(tracks_info)
 #usage[4] = [10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]
 [usage, borderName, lines_path, unarrangable_traffic] = route_selection.route_selection(lineTraffics, routes, circuitBorder, usage, max_traffic)
+#!!! IF DO NOT WANT ALL SELECTED ROUTE DISPLAY, COMMENT NEXT LINE !!!
 route_visualization.visualization(tracks_info, routes, lines_path, circuitBorder)
 
 main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuit_switch_relation, circuits = area_merge.merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
