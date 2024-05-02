@@ -29,6 +29,7 @@ def devider(can_merge, cannot_merge, single, connection, close_unarrange, circui
         feasible_possibles = [nodes for nodes in feasible_possibles if len(nodes) > 1]
         # Try every feasible possible, from possible with most areas to least
         no_match = True
+        can_merge_temp = []
         for possible in feasible_possibles:
             standard = close_unarrange[possible[0]]
             # Get cancelled train with possible and see if same as single area
@@ -57,15 +58,23 @@ def devider(can_merge, cannot_merge, single, connection, close_unarrange, circui
             [usage, borderName, linesPath, unarrangable_traffic] = route_selection.route_selection(lineTraffics, new_routes, circuitBorder, usage, max_traffic)
             if unarrangable_traffic == standard:
                 # Add mergable area
-                can_merge.append(possible)
+                can_merge_temp.append(possible)
                 no_match = False
-                # Add other areas in single
-                unique_elem = set(item) ^ set(possible)
-                for elem in unique_elem:
-                    single.append(elem)
-                break
+        can_merge_temp = sorted(can_merge_temp, key=len, reverse=True)
         if no_match:
+            # If none of possible works
             for i in item:
                 single.append(i)
+        else:
+            # If one or more possibles works
+            used = []
+            for i in can_merge_temp:
+                if not set(used) & set(i):
+                    can_merge.append(i)
+                    used = used + list(i)
+            left = set(item) ^ set(used)
+            if len(left) != 0:
+                for i in left:
+                    single.append(i)
     single = sorted(single)
     return can_merge, single
