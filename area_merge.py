@@ -42,7 +42,7 @@ def merger(main_line_area, connection, switch_area, switch_connection, switch_cr
         # Find which track circuit border must be close
         closed_border = []
         for j in range(len(circuit_line_relation)):
-            if circuit_line_relation[j][0] == i:
+            if i in circuit_line_relation[j]:
                 closed_border.append(circuits[j][0])
         print(f'\033[91mTry to close main line section {i}, resultion closing border: {closed_border}.\033[0m')
         new_routes = []
