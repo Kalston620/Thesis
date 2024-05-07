@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lineTraffics>
+    <line id="1" name="Fright train, to Nrk" start="VS02E" end="SS02" timeFrom="00" timeTo="23" freq="5" stop="False" priority="3" />
+    <line id="2" name="Fright train, from Nrk" start="SS01" end="VS01E" timeFrom="00" timeTo="23" freq="5" stop="False" priority="3" />
+    <line id="3" name="Fright train, to Hls" start="VS02E" end="VS02W" timeFrom="00" timeTo="23" freq="5" stop="False" priority="3" />
+    <line id="4" name="Fright train, from Hls" start="VS01W" end="VS01E" timeFrom="00" timeTo="23" freq="5" stop="False" priority="3" />
+</lineTraffics>
