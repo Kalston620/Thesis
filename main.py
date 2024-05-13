@@ -20,9 +20,9 @@ import route_selection
 import route_visualization
 import usage_matrix_gererator
 
-file_path = 'Katrineholm.railml.xml'
+file_path = 'Katrineholm_4_tracks.railml.xml'
 route_file_path = 'Katrineholm_Route'
-flow_file_path = 'Katrineholm_flow_test.xml'
+flow_file_path = 'Katrineholm_4_tracks_near_real_flow.xml'
 # Start from parse the infra data
 tracks_info = railml_parser.parser(file_path)
 [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
@@ -164,7 +164,7 @@ for group in can_merge:
         for conn in unique_group_connection:
             position = [index for index, connection in enumerate(group_connection) if connection == conn]
             if len(position) == 1:
-                final_switch.append(group[position])
+                final_switch.append(group[int(position[0])])
             else:
                 temp = []
                 for pos in position:

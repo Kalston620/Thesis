@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<railml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.railml.org/schemas/2013">
+  <infrastructure>
+    <tracks>
+        <track name="SP5" mainDir="down">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="SS02" />
+                </trackBegin>
+                <trackEnd pos="2800.0" absPos="2800.0">
+                    <openEnd id="SS02Add" />
+                </trackEnd>
+                <connections>
+                    <switch pos="143.0" absPos="143.0" dir="up" id="sw3sp5">
+                        <connection id="sw3b" ref="sw3a" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="276.0" absPos="276.0" dir="up" id="sw4sp5">
+                        <connection id="sw4b" ref="sw4a" course="right" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2221.0" absPos="2221.0" dir="up" id="sw9sp5" >
+                        <connection id="sw9b" ref="sw9a" course="right" orientation="outgoing" />
+                    </switch>
+                </connections>
+            </trackTopology>
+            <trackElements>
+                <platformEdges>
+                    <platformEdge id="Sp5" pos="1450.0" absPos="1450.0" length="350" />
+                </platformEdges>
+            </trackElements>
+            <ocsElements>
+                <signals>
+                    <signal id="sp5-1" pos="123.0" absPos="123.0" name="sp5-1" dir="up" />
+                    <signal id="sp5-2" pos="296.0" absPos="296.0" name="sp5-2" dir="down" />
+                    <signal id="sp5-3" pos="2241.0" absPos="2241.0" name="sp5-3" dir="down" />
+                </signals>
+                <trainDetectionElements>
+                    <trackCircuitBorder id="5-1" pos="0.0" absPos="0.0" name="5-1" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="5-4" pos="143.0" absPos="143.0" name="5-4" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="5-5" pos="143.0" absPos="143.0" name="5-5" dir="up" insulatedRail="right" />
+                    <trackCircuitBorder id="5-6" pos="143.0" absPos="143.0" name="5-6" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="5-7" pos="276.0" absPos="276.0" name="5-7" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="5-8" pos="276.0" absPos="276.0" name="5-8" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="5-9" pos="276.0" absPos="276.0" name="5-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="5-12" pos="2221.0" absPos="2221.0" name="5-12" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="5-13" pos="2221.0" absPos="2221.0" name="5-13" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="5-14" pos="2221.0" absPos="2221.0" name="5-14" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="5-15" pos="2800.0" absPos="2800.0" name="5-15" dir="down" insulatedRail="none" />
+                </trainDetectionElements>
+            </ocsElements>
+        </track>
+        <track name="SP4" mainDir="up">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="SS01" />
+                </trackBegin>
+                <trackEnd pos="2800.0" absPos="2800.0">
+                    <openEnd id="SS01Add" />
+                </trackEnd>
+                <connections>
+                    <switch pos="191.0" absPos="191.0" dir="down" id="sw3sp4">
+                        <connection id="sw3a" ref="sw3b" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="252.0" absPos="252.0" dir="down" id="sw4sp4">
+                        <connection id="sw4a" ref="sw4b" course="right" orientation="outgoing" />
+                    </switch>
+                    <switch pos="1423.0" absPos="1423.0" dir="up" id="sw6sp4">
+                        <connection id="sw6b" ref="sw6a" course="left" orientation="incoming" />
+                    </switch> 
+                    <switch pos="1289.0" absPos="1289.0" dir="up" id="sw7sp4">
+                        <connection id="sw7b" ref="sw7a" course="left" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2155.0" absPos="2155.0" dir="down" id="sw9sp4">
+                        <connection id="sw9a" ref="sw9b" course="right" orientation="outgoing" />
+                    </switch>
+                </connections>
+            </trackTopology>
+            <trackElements>
+                <platformEdges>
+                    <platformEdge id="Sp4" pos="1450.0" absPos="1450.0" length="350" />
+                </platformEdges>
+            </trackElements>
+            <ocsElements>
+                <signals>
+                    <signal id="sp4-1" pos="272.0" absPos="272.0" name="sp4-1" dir="down" />
+                    <signal id="sp4-2" pos="171.0" absPos="171.0" name="sp4-2" dir="up" />
+                    <signal id="sp4-3" pos="1269.0" absPos="1269.0" name="sp4-3" dir="up" />
+                    <signal id="sp4-4" pos="1443.0" absPos="1443.0" name="sp4-4" dir="down" />
+                    <signal id="sp4-5" pos="2135.0" absPos="2135.0" name="sp4-5" dir="up" />
+                </signals>
+                <trainDetectionElements>
+                    <trackCircuitBorder id="4-1" pos="0.0" absPos="0.0" name="4-1" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="4-2" pos="191.0" absPos="191.0" name="4-2" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="4-3" pos="191.0" absPos="191.0" name="4-3" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="4-4" pos="191.0" absPos="191.0" name="4-4" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="4-5" pos="252.0" absPos="252.0" name="4-5" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="4-6" pos="252.0" absPos="252.0" name="4-6" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="4-7" pos="252.0" absPos="252.0" name="4-7" dir="up" insulatedRail="right" />
+                    <trackCircuitBorder id="4-8" pos="1289.0" absPos="1289.0" name="4-8" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="4-9" pos="1289.0" absPos="1289.0" name="4-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="4-10" pos="1289.0" absPos="1289.0" name="4-10" dir="up" insulatedRail="left" />
+                    <trackCircuitBorder id="4-11" pos="1423.0" absPos="1423.0" name="4-11" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="4-12" pos="1423.0" absPos="1423.0" name="4-12" dir="down" insulatedRail="left" />
+                    <trackCircuitBorder id="4-13" pos="1423.0" absPos="1423.0" name="4-13" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="4-14" pos="2155.0" absPos="2155.0" name="4-14" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="4-15" pos="2155.0" absPos="2155.0" name="4-15" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="4-16" pos="2155.0" absPos="2155.0" name="4-16" dir="up" insulatedRail="right" />
+                    <trackCircuitBorder id="4-17" pos="2800.0" absPos="2800.0" name="4-17" dir="down" insulatedRail="none" />
+                </trainDetectionElements> 
+            </ocsElements>
+        </track>
+        <track name="SP3" mainDir="down">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="VS02W" />
+                </trackBegin>
+                <trackEnd pos="2800.0" absPos="2800.0">
+                    <openEnd id="VS02E" />
+                </trackEnd>
+                <connections>
+                    <switch pos="110.0" absPos="110.0" dir="up" id="sw1sp3">
+                        <connection id="sw1b" ref="sw1a" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="195.0" absPos="195.0" dir="up" id="sw2sp3">
+                        <connection id="sw2b" ref="sw2a" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="1289.0" absPos="1289.0" dir="down" id="sw6sp3">
+                        <connection id="sw6a" ref="sw6b" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="1423.0" absPos="1423.0" dir="down" id="sw7sp3">
+                        <connection id="sw7a" ref="sw7b" course="left" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2567.0" absPos="2567.0" dir="up" id="sw11sp3">
+                        <connection id="sw11b" ref="sw11a" course="right" orientation="incoming" />
+                    </switch>
+                </connections>
+            </trackTopology>
+            <trackElements>
+                <platformEdges>
+                    <platformEdge id="Sp3" pos="1450.0" absPos="1450.0" length="350" />
+                </platformEdges>
+            </trackElements>
+            <ocsElements>
+                <signals>
+                    <signal id="sp3-1" pos="215.0" absPos="215.0" name="sp3-1" dir="down" />
+                    <signal id="sp3-2" pos="90.0" absPos="90.0" name="sp3-2" dir="up" />
+                    <signal id="sp3-3" pos="1269.0" absPos="1269.0" name="sp3-3" dir="up" />
+                    <signal id="sp3-4" pos="1443.0" absPos="1443.0" name="sp3-4" dir="down" />
+                    <signal id="sp3-6" pos="2547.0" absPos="2547.0" name="sp3-6" dir="up" />
+                </signals>
+                <trainDetectionElements>
+                    <trackCircuitBorder id="3-1" pos="0.0" absPos="0.0" name="3-1" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-2" pos="110.0" absPos="110.0" name="3-2" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-3" pos="110.0" absPos="110.0" name="3-3" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="3-4" pos="110.0" absPos="110.0" name="3-4" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-5" pos="195.0" absPos="195.0" name="3-5" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-6" pos="195.0" absPos="195.0" name="3-6" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-7" pos="195.0" absPos="195.0" name="3-7" dir="up" insulatedRail="right" />
+                    <trackCircuitBorder id="3-8" pos="1289.0" absPos="1289.0" name="3-8" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-9" pos="1289.0" absPos="1289.0" name="3-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-10" pos="1289.0" absPos="1289.0" name="3-10" dir="up" insulatedRail="left" />
+                    <trackCircuitBorder id="3-11" pos="1423.0" absPos="1423.0" name="3-11" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-12" pos="1423.0" absPos="1423.0" name="3-12" dir="down" insulatedRail="left" />
+                    <trackCircuitBorder id="3-13" pos="1423.0" absPos="1423.0" name="3-13" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-16" pos="2433.0" absPos="2433.0" name="3-16" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-17" pos="2567.0" absPos="2567.0" name="3-17" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="3-18" pos="2567.0" absPos="2567.0" name="3-18" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-19" pos="2567.0" absPos="2567.0" name="3-19" dir="up" insulatedRail="right" />
+                    <trackCircuitBorder id="3-22" pos="2746.0" absPos="2746.0" name="3-22" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="3-23" pos="2800.0" absPos="2800.0" name="3-23" dir="down" insulatedRail="none" />
+                </trainDetectionElements>
+            </ocsElements>
+        </track>
+        <track name="SP2" mainDir="up">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="0.0">
+                    <openEnd id="VS01W" />
+                </trackBegin>
+                <trackEnd pos="2800.0" absPos="2800.0">
+                    <openEnd id="VS01E" />
+                </trackEnd>
+                <connections>
+                    <switch pos="50.0" absPos="50.0" dir="down" id="sw1sp2">
+                        <connection id="sw1a" ref="sw1b" course="right" orientation="outgoing" />
+                    </switch>
+                    <switch pos="252.0" absPos="252.0" dir="down" id="sw2sp2">
+                        <connection id="sw2a" ref="sw2b" course="right" orientation="incoming" />
+                    </switch>
+                    <switch pos="1199.0" absPos="1199.0" dir="up" id="sw5">
+                        <connection id="sw5b" ref="sw5a" course="left" orientation="outgoing" />
+                    </switch>
+                    <switch pos="2181.0" absPos="2181.0" dir="up" id="sw8">
+                        <connection id="sw8b" ref="sw8a" course="left" orientation="incoming" />
+                    </switch>
+                    <switch pos="2656.0" absPos="2656.0" dir="down" id="sw11sp2">
+                        <connection id="sw11a" ref="sw11b" course="right" orientation="incoming" />
+                    </switch>
+                </connections>
+            </trackTopology>
+            <ocsElements>
+                <signals>
+                    <signal id="sp2-1" pos="30.0" absPos="30.0" name="sp2-1" dir="up" />
+                    <signal id="sp2-2" pos="273.0" absPos="273.0" name="sp2-2" dir="down" />
+                    <signal id="sp2-3" pos="1180.0" absPos="1180.0" name="sp2-3" dir="up" />
+                    <signal id="sp2-4" pos="2201.0" absPos="2201.0" name="sp2-4" dir="down" />
+                    <signal id="sp2-5" pos="2676.0" absPos="2676.0" name="sp2-5" dir="down" />
+                </signals>
+                <trainDetectionElements>
+                    <trackCircuitBorder id="2-1" pos="0.0" absPos="0.0" name="2-1" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-2" pos="50.0" absPos="50.0" name="2-2" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-3" pos="50.0" absPos="50.0" name="2-3" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-4" pos="50.0" absPos="50.0" name="2-4" dir="up" insulatedRail="right" />
+                    <trackCircuitBorder id="2-5" pos="252.0" absPos="252.0" name="2-5" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-6" pos="252.0" absPos="252.0" name="2-6" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="2-7" pos="252.0" absPos="252.0" name="2-7" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-8" pos="1199.0" absPos="1199.0" name="2-8" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-9" pos="1199.0" absPos="1199.0" name="2-9" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-10" pos="1199.0" absPos="1199.0" name="2-10" dir="up" insulatedRail="left" />
+                    <trackCircuitBorder id="2-11" pos="2181.0" absPos="2181.0" name="2-11" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-12" pos="2181.0" absPos="2181.0" name="2-12" dir="down" insulatedRail="left" />
+                    <trackCircuitBorder id="2-13" pos="2181.0" absPos="2181.0" name="2-13" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-14" pos="2656.0" absPos="2656.0" name="2-14" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-15" pos="2656.0" absPos="2656.0" name="2-15" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="2-16" pos="2656.0" absPos="2656.0" name="2-16" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-17" pos="2800.0" absPos="2800.0" name="2-17" dir="down" insulatedRail="none" />
+                </trainDetectionElements>
+            </ocsElements>
+        </track>
+        <track name="SP1" mainDir="up">
+            <trackTopology>
+                <trackBegin pos="0.0" absPos="1200.0">
+                    <connection id="sw5a" ref="sw5b" />
+                </trackBegin>
+                <trackEnd pos="923.0" absPos="2123.0">
+                    <connection id="sw8a" ref="sw8b" />
+                </trackEnd>
+            </trackTopology>
+            <trackElements>
+                <platformEdges>
+                    <platformEdge id="Sp1" pos="250.0" absPos="1450.0" length="300" />
+                </platformEdges>
+            </trackElements>
+            <ocsElements>
+                <signals>
+                    <signal id="sp1-1" pos="50.0" absPos="1250.0" name="sp1-1" dir="down" />
+                    <signal id="sp1-2" pos="900.0" absPos="2100.0" name="sp1-2" dir="up" />
+                </signals>
+                <trainDetectionElements>
+                    <trackCircuitBorder id="1-1" pos="0.0" absPos="1200.0" name="1-1" dir="down" insulatedRail="right" />
+                    <trackCircuitBorder id="1-2" pos="0.0" absPos="1200.0" name="1-2" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="1-3" pos="923.0" absPos="2123.0" name="1-3" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="1-4" pos="923.0" absPos="2123.0" name="1-4" dir="up" insulatedRail="right" />
+                </trainDetectionElements>
+            </ocsElements>
+        </track>
+    </tracks>
+  </infrastructure>
+</railml>
