@@ -289,7 +289,7 @@
                 <signals>
                     <signal id="sp1-1" pos="50.0" absPos="1250.0" name="sp1-1" dir="down" />
                     <signal id="sp1-2" pos="900.0" absPos="2100.0" name="sp1-2" dir="up" />
-                    <signal id="sp1-3" pos="650.0" absPos="1850.0" name="sp1-2" dir="down" />
+                    <signal id="sp1-3" pos="650.0" absPos="1850.0" name="sp1_add_1" dir="down" />
                 </signals>
                 <trainDetectionElements>
                     <trackCircuitBorder id="1-1" pos="0.0" absPos="1200.0" name="1-1" dir="down" insulatedRail="right" />
