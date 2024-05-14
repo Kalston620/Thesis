@@ -259,8 +259,8 @@
                     <trackCircuitBorder id="2-10" pos="1199.0" absPos="1199.0" name="2-10" dir="up" insulatedRail="left" />
                     <trackCircuitBorder id="2-20" pos="1400.0" absPos="1400.0" name="2_add_3" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="2-21" pos="1400.0" absPos="1400.0" name="2_add_4" dir="up" insulatedRail="none" />
-                    <trackCircuitBorder id="2-22" pos="1850.0" absPos="1850.0" name="2_add_4" dir="down" insulatedRail="none" />
-                    <trackCircuitBorder id="2-23" pos="1850.0" absPos="1850.0" name="2_add_5" dir="up" insulatedRail="none" />
+                    <trackCircuitBorder id="2-22" pos="1850.0" absPos="1850.0" name="2_add_5" dir="down" insulatedRail="none" />
+                    <trackCircuitBorder id="2-23" pos="1850.0" absPos="1850.0" name="2_add_6" dir="up" insulatedRail="none" />
                     <trackCircuitBorder id="2-11" pos="2181.0" absPos="2181.0" name="2-11" dir="down" insulatedRail="none" />
                     <trackCircuitBorder id="2-12" pos="2181.0" absPos="2181.0" name="2-12" dir="down" insulatedRail="left" />
                     <trackCircuitBorder id="2-13" pos="2181.0" absPos="2181.0" name="2-13" dir="up" insulatedRail="none" />
