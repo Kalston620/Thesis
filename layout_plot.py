@@ -32,7 +32,10 @@ def plot_track_layout(tracks_info):
         plt.plot([pos_start, pos_end], [y_axis, y_axis], label=f'Track {track_name}', linestyle='-', color='black')
         # Signal
         for signal in track_info['signals']:
-            plt.scatter(pos_start + signal['pos'], y_axis, marker='s', color='red', label=f"{signal['name']} ({track_name})")
+            if signal['dir'] == 'up':
+                plt.scatter(pos_start + signal['pos'], y_axis, marker='>', color='red', label=f"{signal['name']} ({track_name})")
+            elif signal['dir'] == 'down':
+                plt.scatter(pos_start + signal['pos'], y_axis, marker='<', color='red', label=f"{signal['name']} ({track_name})")
 
         # Switch and the connection
         for switch in track_info['switches']:
