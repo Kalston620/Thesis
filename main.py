@@ -49,7 +49,7 @@ with open('usage.txt', 'w', encoding='utf-8') as file:
     for bn, us in zip(borderName, usage):
         file.write(f"{bn}: {us}\n")
 #!!! IF DO NOT WANT ALL SELECTED ROUTE DISPLAY, COMMENT NEXT LINE !!!
-route_visualization.visualization(tracks_info, routes, lines_path, circuitBorder)
+#route_visualization.visualization(tracks_info, routes, lines_path, circuitBorder)
 
 main_line_close_unarrange, cancel_connection, switch_close_unarrange, cancel_connection_switch, circuit_line_relation, circuit_switch_relation, circuits = area_merge.merger(main_line_area, connection, switch_area, switch_connection, switch_cross, tracks_info, routes, lineTraffics)
 
@@ -235,6 +235,24 @@ for i in range(len(switch_main_relation)):
         same_color_final[final_switch[i]] = temp1
 
 print(f'Mainline_final:\n{final}\nSwitch_final:\n{final_switch}\nSame block for switch and mainline:\n{same_color_min_area}\nSame block for switch and final:\n{same_color_final}')
+areas_file_name = 'areas.txt'
+with open(areas_file_name, 'w') as file:
+    file.write('Small mainline areas position:\n')
+    for i, item in enumerate(main_line_area):
+        file.write(f'    {i}: {item},\n')
+    file.write('\n')
+    file.write('Single switch areas position:\n')
+    for i, item in enumerate(switch_area):
+        file.write(f'    {i}: {item},\n')
+    file.write('\n')
+    file.write('Mainline merge relations (Please refer to the sequence number of Small mainline areas position):\n')
+    for item in final:
+        file.write(f'    {item},\n')
+    file.write('\n')
+    file.write('Switch merge relations (Please refer to the sequence number of Single switch areas position):\n')
+    for item in final_switch:
+        file.write(f'    {item},\n')
+    file.write('\n')
 # TODO: Write visualization part
 layout_plot_track_only.plot_track_layout(tracks_info)
 # plot switch in different color
