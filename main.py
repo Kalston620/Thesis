@@ -150,10 +150,19 @@ for i in range(len(switch_cross)):
 final_switch = switch_pair
 # See if can_merge actually can merge (based on start and end of switch is in same main line area)
 temp = []
+pos_not_found = False
 for group in can_merge:
     group_connection = []
     for switch in group:
-        group_connection.append(switch_connection[switch])
+        # Change the connection from min-areas to final
+        temp = switch_connection[switch]
+        pos1 = next((index for index, tup in enumerate(final) if temp[0] in tup), None)
+        pos2 = next((index for index, tup in enumerate(final) if temp[1] in tup), None)
+        if pos1 != None and pos2 != None:
+            group_connection.append([int(pos1), int(pos2)])
+        else:
+            raise Exception("Position not found! /163")
+            
     unique_tuples = set(tuple(sublist) for sublist in group_connection)
     unique_group_connection = [list(t) for t in unique_tuples]
     if len(unique_group_connection) == len(group_connection):
