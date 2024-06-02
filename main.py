@@ -22,8 +22,8 @@ import route_visualization
 import usage_matrix_gererator
 
 file_path = 'Katrineholm_4_tracks.railml.xml'
-route_file_path = 'Katrineholm_Route'
-flow_file_path = 'Katrineholm_4_tracks_near_real_flow.xml'
+route_file_path = 'Katrineholm_Route.xml'
+flow_file_path = 'Katrineholm_4_tracks_test_flow.xml'
 # Start from parse the infra data
 tracks_info = railml_parser.parser(file_path)
 [track_data, connection_data, circuitBorder_data] = data_formatting.data_formatting(tracks_info)
@@ -156,8 +156,8 @@ for group in can_merge:
     for switch in group:
         # Change the connection from min-areas to final
         temp = switch_connection[switch]
-        pos1 = next((index for index, tup in enumerate(final) if temp[0] in tup), None)
-        pos2 = next((index for index, tup in enumerate(final) if temp[1] in tup), None)
+        pos1 = next((index for index, item in enumerate(final) if isinstance(item, tuple) and temp[0] in item or item == temp[0]), None)
+        pos2 = next((index for index, item in enumerate(final) if isinstance(item, tuple) and temp[1] in item or item == temp[1]), None)
         if pos1 != None and pos2 != None:
             group_connection.append([int(pos1), int(pos2)])
         else:
